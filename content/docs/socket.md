@@ -22,7 +22,7 @@ php artisan make:socket MyNameClass
 ```
 В папке `app/HTTP/Socket/Listener` создаться шаблон веб-сокета.
 
-После создания необходимо установить маршрут который распологается `app/HTTP/Socket/routes.php`
+После создания необходимо установить маршрут который распологается `app/routes/sokets.php`
 
 ```php
 //Основу маршрутизации составляет Symfony Routing Component
@@ -38,48 +38,45 @@ php artisan socket:serve
 
 Пример установки уникальных номеров сокета и сессии laravel
 ```php
-
-
-    public function onOpen(ConnectionInterface $conn)
-    {
-        $this->clients->attach($conn);
-        
-        //Берем user id
-        $userId = $this->getUserFromSession($conn);
-        
-        //Создаем список юзеров подключенных к серверу
-        array_push($this->userList, $userId);
-        
-        //Рассказываем всё что произошло
-        echo "New connection! user_id = ({$userId})\n";
-    }
+public function onOpen(ConnectionInterface $conn)
+{
+    $this->clients->attach($conn);
     
-    public function getUserFromSession($conn)
-    {
-        // Create a new session handler for this client
-        $session = (new SessionManager(App::getInstance()))->driver();
-        
-        // Get the cookies
-        $cookies = $conn->WebSocket->request->getCookies();
-        
-        // Get the laravel's one
-        $laravelCookie = urldecode($cookies[Config::get('session.cookie')]);
-        
-        // get the user session id from it
-        $idSession = Crypt::decrypt($laravelCookie);
-        
-        // Set the session id to the session handler
-        $session->setId($idSession);
-        
-        // Bind the session handler to the client connection
-        $conn->session = $session;
-        $conn->session->start();
-        
-        //Берем юзера из сессии
-        $userId = $conn->session->get(Auth::getName());
-        return $userId;
-    }
+    //Берем user id
+    $userId = $this->getUserFromSession($conn);
+    
+    //Создаем список юзеров подключенных к серверу
+    array_push($this->userList, $userId);
+    
+    //Рассказываем всё что произошло
+    echo "New connection! user_id = ({$userId})\n";
+}
 
+public function getUserFromSession($conn)
+{
+    // Create a new session handler for this client
+    $session = (new SessionManager(App::getInstance()))->driver();
+    
+    // Get the cookies
+    $cookies = $conn->WebSocket->request->getCookies();
+    
+    // Get the laravel's one
+    $laravelCookie = urldecode($cookies[Config::get('session.cookie')]);
+    
+    // get the user session id from it
+    $idSession = Crypt::decrypt($laravelCookie);
+    
+    // Set the session id to the session handler
+    $session->setId($idSession);
+    
+    // Bind the session handler to the client connection
+    $conn->session = $session;
+    $conn->session->start();
+    
+    //Берем юзера из сессии
+    $userId = $conn->session->get(Auth::getName());
+    return $userId;
+}
 ```
 
 
@@ -115,6 +112,53 @@ socket.onerror = function(error) {
 Например, строку:
 socket.send("Привет");
 
+```
+
+
+Рекомендуеться подключать веб сокет через Nginx или HAProxy
+
+Пример настройки для Nginx
+```
+ map $http_upgrade $connection_upgrade {
+        default upgrade;
+        '' close;
+    }
+
+    upstream websocket {
+        server you-web-site.com:5300;
+    }
+
+    server {
+        listen 443;
+        location / {
+            proxy_pass http://websocket;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection $connection_upgrade;
+
+
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto https;
+            proxy_redirect off;
+        }
+    }
+```
+
+
+Запуск веб-сокета на рабочей машине рекомендуется осуществлять с помощью Supervisor, так же как и очередь задач в Laravel
+
+```
+[program:laravel-socket]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/your-path/artisan socket:serve
+autostart=true
+autorestart=true
+user=root
+numprocs=1
+redirect_stderr=true
+stdout_logfile=/var/www/your-path/storage/logs/socket.log
 ```
 
 @endverbatim
