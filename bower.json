@@ -1,0 +1,22 @@
+{
+  "name": "OrchidTheme",
+  "version": "0.0.1",
+  "authors": [
+    "Tabuna",
+    "Mamau"
+  ],
+  "description": "Application template",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.*",
+    "simple-line-icons": "~2.2.4",
+    "prism": "~1.4.1"
+  }
+}
