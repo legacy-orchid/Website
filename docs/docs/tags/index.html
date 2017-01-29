@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <title>Orchid - PHP платформа - Тег</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ac5ca0">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+
+<header id="header" class="navbar bg-white-only box-shadow-lg">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="brand navbar-brand">
+                <img src="/assets/img/orchid.svg" width="150px">
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+
+    <div class="container padder-v">
+        <div class="row">
+
+            <div class="col-md-3">
+                <nav>
+    <h4 class="text-orchid font-thin">Как начать</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/">Главная</a></li>
+        <li><a href="/docs/installation/">Установка</a></li>
+        <li><s>Обновление</s></li>
+        <li><a href="/docs/roudmap/">Дорожная карта</a></li>
+    </ul>
+
+
+    <h4 class="text-orchid font-thin">Приложение</h4>
+    <ul class="toc-links">
+        <li><s href="/docs/installation/">Post</s></li>
+        <li><s href="/docs/installation/">Fields</s></li>
+        <li><s href="/docs/installation/">Types</s></li>
+        <li><s href="/docs/installation/">Category</s></li>
+    </ul>
+
+    <h4 class="text-orchid font-thin">Основы</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/access/">Права доступа</a></li>
+        <li><s href="/docs/logs/"><a>Журнал</a></s></li>
+        <li><a href="/docs/widget/">Виджеты</a></li>
+        <li><a href="/docs/settings/">Настройки</a></li>
+        <li><a href="/docs/extends/">Расширение</a></li>
+        <li><a href="/docs/alert/">Уведомления</a></li>
+        <li><a href="/docs/active/">Активные ссылки</a></li>
+        <li><a href="/docs/tags/">Тегирование</a></li>
+        <li><s href="/docs/installation/">Локализация</s></li>
+    </ul>
+
+
+
+    <h4 class="text-orchid font-thin">Пакеты</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/socket/">Веб-сокет</a></li>
+    </ul>
+
+
+    <h4 class="text-orchid font-thin">Участиве в проекте</h4>
+    <ul class="toc-links">
+        <li><a href="/blog/">Блог</a></li>
+        <li><a href="/docs/contributors/">Участие в разработке</a></li>
+        <li><a href="/docs/license/">Лицензия</a></li>
+    </ul>
+</nav>            </div>
+
+            <div class="col-md-9 panel b box-shadow-lg wrapper-lg">
+
+                <main>
+                                <p></p>
+<h1>Тег</h1>
+<hr />
+<p>Тег (метка) — слово или фраза которая может объединять группу текста, изображений и т.п по теме или </p>
+<h3>Добавление :</h3>
+<p>В этом разделе мы покажем, как вы можете управлять своими субъектами тегов.</p>
+<pre><code class="language-php">// Get the entity object
+$post = Post::find(1);
+
+// Through a string
+$post-&gt;tag('foo, bar, baz');
+
+// Through an array
+$post-&gt;tag([ 'foo', 'bar', 'baz' ]);</code></pre>
+<h3>Удаление :</h3>
+<p>Удаляет один или несколько тегов  объекта через массив или
+через строку разделенных сущности разделителем.</p>
+<pre><code class="language-php">// Get the entity object
+$post = Post::find(1);
+
+// Through a string
+$post-&gt;untag('bar, baz');
+
+// Through an array
+$post-&gt;untag([ 'bar', 'baz' ]);
+
+// Remove all the tags
+$post-&gt;untag();</code></pre>
+<h3>Настройка :</h3>
+<p>Этот метод очень похож на метод tag(), но он сочетает в себе untag (),
+так что он автоматически идентифицирует теги для добавления и удаления.
+Это очень полезный метод при запуске обновления на субъектов,
+и вы не хотите иметь дело с проверками, чтобы проверить,
+какие теги должны быть добавлены или удалены.</p>
+<pre><code class="language-php">// Get the entity object
+$post = Post::find(1);
+
+// Through a string
+$post-&gt;setTags('foo, bar, baz');
+
+// Through an array
+$post-&gt;setTags([ 'foo', 'bar', 'baz' ]);
+
+// Using the `slug` column
+$post-&gt;setTags([ 'foo', 'bar', 'baz' ], 'slug');</code></pre>
+<h3>Чтение  :</h3>
+<p>У нас есть некоторые методы, чтобы помочь вам получить все теги,
+прикрепленные к объекту и делать обратное и получить все объекты
+с заданными тегами.</p>
+<pre><code class="language-php">// Get the entity object
+$post = Post::whereTag('foo, bar')-&gt;get();
+
+$post = Post::find(1);
+$tags = $post-&gt;tags;
+
+$tags = Post::allTags();</code></pre>
+<p></p>
+                            </main>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<footer id="footer">
+    <div class="bg-white b-t">
+        <div class="container padder-v">
+
+
+            <div class="row">
+
+                <div class="col-md-6 col-md-offset-6">
+                    <div class="pull-right text-right">
+                        <span class="text-md block">The Orchid</span>
+                        <small>Код приложения опубликован под лицензией MIT</small>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

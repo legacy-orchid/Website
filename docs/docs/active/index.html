@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <title>Orchid - PHP платформа - Активные ссылки</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ac5ca0">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+
+<header id="header" class="navbar bg-white-only box-shadow-lg">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="brand navbar-brand">
+                <img src="/assets/img/orchid.svg" width="150px">
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+
+    <div class="container padder-v">
+        <div class="row">
+
+            <div class="col-md-3">
+                <nav>
+    <h4 class="text-orchid font-thin">Как начать</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/">Главная</a></li>
+        <li><a href="/docs/installation/">Установка</a></li>
+        <li><s>Обновление</s></li>
+        <li><a href="/docs/roudmap/">Дорожная карта</a></li>
+    </ul>
+
+
+    <h4 class="text-orchid font-thin">Приложение</h4>
+    <ul class="toc-links">
+        <li><s href="/docs/installation/">Post</s></li>
+        <li><s href="/docs/installation/">Fields</s></li>
+        <li><s href="/docs/installation/">Types</s></li>
+        <li><s href="/docs/installation/">Category</s></li>
+    </ul>
+
+    <h4 class="text-orchid font-thin">Основы</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/access/">Права доступа</a></li>
+        <li><s href="/docs/logs/"><a>Журнал</a></s></li>
+        <li><a href="/docs/widget/">Виджеты</a></li>
+        <li><a href="/docs/settings/">Настройки</a></li>
+        <li><a href="/docs/extends/">Расширение</a></li>
+        <li><a href="/docs/alert/">Уведомления</a></li>
+        <li><a href="/docs/active/">Активные ссылки</a></li>
+        <li><a href="/docs/tags/">Тегирование</a></li>
+        <li><s href="/docs/installation/">Локализация</s></li>
+    </ul>
+
+
+
+    <h4 class="text-orchid font-thin">Пакеты</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/socket/">Веб-сокет</a></li>
+    </ul>
+
+
+    <h4 class="text-orchid font-thin">Участиве в проекте</h4>
+    <ul class="toc-links">
+        <li><a href="/blog/">Блог</a></li>
+        <li><a href="/docs/contributors/">Участие в разработке</a></li>
+        <li><a href="/docs/license/">Лицензия</a></li>
+    </ul>
+</nav>            </div>
+
+            <div class="col-md-9 panel b box-shadow-lg wrapper-lg">
+
+                <main>
+                                <p></p>
+<h1>Активные ссылки</h1>
+<hr />
+<p>Активные ссылки - это вспомогательный пакет, который позволяет легко распознать
+текущий путь (Url) или маршрут (Route), очень полезный для добавления класса
+&quot;active&quot; (например, те, которые используются в Bootstrap), а также выполнения
+различных действий, только тогда, когда определённый маршрут активен.
+Она также включает в себя помощников для получения текущего контроллера и действия имен.</p>
+<h2>Использование</h2>
+<h3>Вспомогательные функции</h3>
+<p>Вспомогательные функций, дают возможность использования без фасада или создания экземпляра класса.</p>
+<pre><code class="language-php">active()
+is_active()</code></pre>
+<h3>Использование <code>active()</code></h3>
+<p>Вы передаете массив маршрутов и путей, которые вы хотите видеть.
+Если какой-либо маршрут совпадёт, функция возвратит строку <code>active</code>.
+В качестве альтернативы, вы можете передать свою строку для возврата в качестве второго аргумента.</p>
+<pre><code class="language-php">
+// Returns 'active' if the current route matches any path or route name.
+active('login', 'users/*', 'posts.*', 'pages.contact'); 
+
+ // Returns 'active-class' if the current route is 'login' or 'logout'.
+active(['login', 'logout'], 'active-class');</code></pre>
+<p>In the first example, the function will return the string <code>active</code> if the current path is <code>login</code>, starts with <code>users/</code> or if the name of the current route is <code>posts.create</code>.</p>
+<p>Do note that a number of argument types are provided: you can use a path string, you can use a path string with a wildcard (using the <code>*</code>) and you can also use named routes.</p>
+<p>You can use this function with your links to give them an active state.</p>
+<pre><code class="language-php">&lt;a href="{{ route('posts.index') }}" class="{{ active('posts.index') }}"&gt;
+    All posts
+&lt;/a&gt;</code></pre>
+<p>You can also provide certain paths or routes to be exluded when being considered.</p>
+<pre><code class="language-php">active(['pages/*', 'not:pages/contact'])
+
+active(['pages.*', 'not:pages.contact'])</code></pre>
+<h3>Using <code>is_active()</code></h3>
+<p>This works much the same as <code>active()</code>, you can pass the paths and routes to it but instead it will return a boolean if the current page matches. </p>
+<pre><code class="language-php">@if (is_active('posts/*'))
+    You're looking at a blog post!
+@endif</code></pre>
+<h3>Additional helpers</h3>
+<p>Two additional functions are provided to get the current controller and action, if your routing is being handled by a controller for a request. These functions will return the lowercase controller/action name, without the method of the request. Here is an example for a request that is routed to `FooController@getBar':</p>
+<pre><code class="language-php">$controller = controller_name(); // foo
+
+$action = action_name(); // bar</code></pre>
+<p></p>
+                            </main>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<footer id="footer">
+    <div class="bg-white b-t">
+        <div class="container padder-v">
+
+
+            <div class="row">
+
+                <div class="col-md-6 col-md-offset-6">
+                    <div class="pull-right text-right">
+                        <span class="text-md block">The Orchid</span>
+                        <small>Код приложения опубликован под лицензией MIT</small>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

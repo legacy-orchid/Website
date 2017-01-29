@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <title>Orchid - PHP платформа - Some Markdown</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ac5ca0">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+
+<header id="header" class="navbar bg-white-only box-shadow-lg">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="brand navbar-brand">
+                <img src="/assets/img/orchid.svg" width="150px">
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+
+    <div class="container padder-v">
+        <div class="row">
+
+            <div class="col-md-3">
+                <nav>
+    <h4 class="text-orchid font-thin">Как начать</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/">Главная</a></li>
+        <li><a href="/docs/installation/">Установка</a></li>
+        <li><s>Обновление</s></li>
+        <li><a href="/docs/roudmap/">Дорожная карта</a></li>
+    </ul>
+
+
+    <h4 class="text-orchid font-thin">Приложение</h4>
+    <ul class="toc-links">
+        <li><s href="/docs/installation/">Post</s></li>
+        <li><s href="/docs/installation/">Fields</s></li>
+        <li><s href="/docs/installation/">Types</s></li>
+        <li><s href="/docs/installation/">Category</s></li>
+    </ul>
+
+    <h4 class="text-orchid font-thin">Основы</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/access/">Права доступа</a></li>
+        <li><s href="/docs/logs/"><a>Журнал</a></s></li>
+        <li><a href="/docs/widget/">Виджеты</a></li>
+        <li><a href="/docs/settings/">Настройки</a></li>
+        <li><a href="/docs/extends/">Расширение</a></li>
+        <li><a href="/docs/alert/">Уведомления</a></li>
+        <li><a href="/docs/active/">Активные ссылки</a></li>
+        <li><a href="/docs/tags/">Тегирование</a></li>
+        <li><s href="/docs/installation/">Локализация</s></li>
+    </ul>
+
+
+
+    <h4 class="text-orchid font-thin">Пакеты</h4>
+    <ul class="toc-links">
+        <li><a href="/docs/socket/">Веб-сокет</a></li>
+    </ul>
+
+
+    <h4 class="text-orchid font-thin">Участиве в проекте</h4>
+    <ul class="toc-links">
+        <li><a href="/blog/">Блог</a></li>
+        <li><a href="/docs/contributors/">Участие в разработке</a></li>
+        <li><a href="/docs/license/">Лицензия</a></li>
+    </ul>
+</nav>            </div>
+
+            <div class="col-md-9 panel b box-shadow-lg wrapper-lg">
+
+                <main>
+                                <p></p>
+<h1>Installation</h1>
+<hr />
+<p>Orchid based off <a href="http://laravel.com">Laravel Framework</a>, so before you put the Orchid, you must install <a href="http://laravel.com">Laravel</a>.</p>
+<h3>Via Composer</h3>
+<p>Add the project according</p>
+<pre><code class="language-php">"require": {
+    "orchid/platform": "dev-master"
+}</code></pre>
+<h3>Provider and Facades</h3>
+<p>Add the following elements in the configuration file <code>config/app</code></p>
+<pre><code class="language-php">Orchid\Settings\Providers\SettingsServiceProvider::class,
+Orchid\Foundation\Providers\FoundationServiceProvider::class,
+Orchid\Widget\Providers\WidgetServiceProvider::class,
+Orchid\Installer\Providers\InstallerServiceProvider::class,
+Orchid\Alert\AlertServiceProvider::class,</code></pre>
+<pre><code class="language-php">'Alert' =&gt;  Orchid\Foundation\Facades\Alert::class,
+'Dashboard' =&gt;  Orchid\Foundation\Facades\Dashboard::class,
+'Setting' =&gt;  Orchid\Foundation\Facades\Setting::class,
+'Active' =&gt; Watson\Active\Facades\Active::class,</code></pre>
+<h3>Config</h3>
+<p>Change the following entry in the configuration file<code>config/auth.php</code></p>
+<pre><code class="language-php">    'providers' =&gt; [
+        'users' =&gt; [
+            'driver' =&gt; 'eloquent',
+            'model' =&gt; Orchid\Dashboard\Models\User::class,
+        ],</code></pre>
+<p>or inherit model App\User</p>
+<pre><code class="language-php">&lt;?php
+
+namespace App;
+
+use Orchid\Foundation\Core\Models\User as UserOrchid;
+
+class User extends UserOrchid
+{
+
+}
+</code></pre>
+<h3>Publish</h3>
+<p>To publish a package in your application, use the command</p>
+<pre><code class="language-php">php artisan vendor:publish
+php artisan migrate</code></pre>
+<h3>Creating administrator</h3>
+<p>To create a user with the maximum (at time of writing) rights
+run the following command:</p>
+<pre><code class="language-php">php artisan make:admin nickname email@email.com secretpassword</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Remember that the next update will not change the data.
+</p>
+</blockquote>
+                            </main>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<footer id="footer">
+    <div class="bg-white b-t">
+        <div class="container padder-v">
+
+
+            <div class="row">
+
+                <div class="col-md-6 col-md-offset-6">
+                    <div class="pull-right text-right">
+                        <span class="text-md block">The Orchid</span>
+                        <small>Код приложения опубликован под лицензией MIT</small>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="/assets/js/app.js"></script>
+</body>
+</html>
