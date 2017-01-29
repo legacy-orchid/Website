@@ -118,38 +118,38 @@ socket.send("Привет");
 Рекомендуеться подключать веб сокет через Nginx или HAProxy
 
 Пример настройки для Nginx
-```
- map $http_upgrade $connection_upgrade {
-        default upgrade;
-        '' close;
+```php
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    '' close;
+}
+
+upstream websocket {
+    server you-web-site.com:5300;
+}
+
+server {
+    listen 443;
+    location / {
+        proxy_pass http://websocket;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+
+
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto https;
+        proxy_redirect off;
     }
-
-    upstream websocket {
-        server you-web-site.com:5300;
-    }
-
-    server {
-        listen 443;
-        location / {
-            proxy_pass http://websocket;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection $connection_upgrade;
-
-
-                proxy_set_header Host $host;
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Forwarded-Proto https;
-            proxy_redirect off;
-        }
-    }
+}
 ```
 
 
 Запуск веб-сокета на рабочей машине рекомендуется осуществлять с помощью Supervisor, так же как и очередь задач в Laravel
 
-```
+```php
 [program:laravel-socket]
 process_name=%(program_name)s_%(process_num)02d
 command=php /var/www/your-path/artisan socket:serve
