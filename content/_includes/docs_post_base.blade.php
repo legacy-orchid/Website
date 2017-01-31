@@ -4,24 +4,27 @@
 
 @section('body')
 
+    <div class="container-fluid">
 
-    <div class="container padder-v">
-        <div class="row">
+        <div class="row  bg-white">
+            <div class="container m-t-xl m-b-xl">
+                <div class="row">
 
-            <div class="col-md-3">
-                @include('_includes.sidebar')
-            </div>
+                    <div class="col-md-3">
+                        @include('_includes.sidebar')
+                    </div>
 
-            <div class="col-md-9 panel b box-shadow-lg wrapper-lg">
+                    <div class="col-md-9 b-l b-light wrapper-lg">
 
-                <main>
-                    @yield('post_body')
-                </main>
+                        <main>
+                            @yield('post_body')
+                        </main>
 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
 
 @stop

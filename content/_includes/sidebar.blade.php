@@ -1,4 +1,4 @@
-<nav>
+<nav class="nav-docs">
     <h4 class="text-orchid font-thin">Как начать</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs')">Главная</a></li>
@@ -10,7 +10,7 @@
 
     <h4 class="text-orchid font-thin">Приложение</h4>
     <ul class="toc-links">
-        <li><s href="@url('/docs/installation')">Post</s></li>
+        <li><a href="@url('/docs/post')">Post</a></li>
         <li><s href="@url('/docs/installation')">Fields</s></li>
         <li><s href="@url('/docs/installation')">Types</s></li>
         <li><s href="@url('/docs/installation')">Category</s></li>

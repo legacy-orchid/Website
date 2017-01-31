@@ -1,9 +1,9 @@
 @extends('_includes.blog_post_base')
 
-@section('post::title', 'Stop Trying To Be Somebody')
-@section('post::date', 'February 29, 2016')
-@section('post::image','http://wallpapercave.com/wp/vp75NPD.jpg')
-@section('post::brief', 'They’re waiting for someone to make them into Singers. With the lifestyle, and the glamour to boot. They don’t want to do something. They want to be the person who does something.')
+@section('post::title', 'Запуск веб-сайта')
+@section('post::date', '1 Февраля, 2017')
+@section('post::image','/assets/img/post/start.jpg')
+@section('post::brief', 'Начата работа по написанию документации')
 @section('pageTitle')- @yield('post::title')@stop
 
 @section('post_body')

@@ -1,9 +1,9 @@
 @extends('_includes.blog_post_base')
 
-@section('post::title', 'Guided by the Research on Well-Being')
-@section('post::date', 'February 26, 2016')
-@section('post::image','http://wallpapercave.com/wp/vp75NPD.jpg')
-@section('post::brief', 'The habit concept provides us with some insight into how to bring about changes in our lives, and research about well-being provides us with some insight into which categories of habits to aim for.')
+@section('post::title', 'Запуск документации')
+@section('post::date', '1 Февраля, 2017')
+@section('post::image','/assets/img/post/docs.jpg')
+@section('post::brief', 'Начата работа по написанию документации')
 @section('pageTitle')- @yield('post::title')@stop
 
 @section('post_body')

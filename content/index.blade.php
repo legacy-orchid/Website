@@ -5,200 +5,114 @@
 
 
 
-    <section class="bg-white">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <div class="m-t-xxl m-b-xxl padder-v">
-                    <p class="h1 l-h-1x m-t-xxl text-dark padder-v ">
-                        Надёжное управление для <span class="b-b b-while b-3x">Вашего</span> проекта
+    <section class="container-fluid">
 
+        <div class="row b-b box-shadow bg-white">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+
+                        <div class="page-header">
+                            <p class="h1 l-h-1x text-dark">Надёжное управление для Вашего проекта</p>
+                        </div>
+
+                        <p class="h1 l-h-1x m-t-xl padder-v ">
                             <small>
                                 Мы хотим подарить мощную и гибкую платформу способную<br> на решение не стандартных задач
                             </small>
-
-                    </p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-{{--
-    <section class="bg-white">
-
-        <div class="container">
-            <div class="row">
-
-                <div class="text-center">
-                    <h3 class="l-h-1x m-t-xxl">
-                        <span class="b-b b-while">PHP</span> платформа для сайтов высокого уровня
-                        <p>
-                            <small>Веб-разработка - это просто</small>
                         </p>
-                    </h3>
-                </div>
-            </div>
 
-            <div class="row padder-v">
 
-                <div class="container">
-                    <article class="col-md-4">
-                        <figure class="text-center padder-v">
-                            <p class="padder-v">
-                                <i class="icon-pencil h1"></i>
-                            </p>
-                            <p class="text-orchid"> Идеальный для дизайнеров</p>
-                            <figcaption class="w-sm center-block">
-                                <small>
-                                    Получите полный контроль над HTML, CSS и JavaScript.
-                                </small>
-                            </figcaption>
-                        </figure>
+                    </div>
 
-                        <figure class="text-center padder-v">
-                            <p class="padder-v">
-                                <i class="icon-target h1"></i>
-                            </p>
-                            <p class="text-orchid">Создан для разработчиков</p>
-                            <figcaption class="w-sm center-block">
-                                <small>
-                                    Структура, которая растет вместе с вами
-                                    используя любимые технологии.
-                                </small>
-                            </figcaption>
-                        </figure>
-                    </article>
+                    <div class="col-md-6">
 
-                    <article class="col-md-4">
-                        <figure class="text-center padder-v">
-                            <p class="padder-v">
-                                <i class="icon-like h1"></i>
-                            </p>
-                            <p class="text-orchid">Все говорят Да!</p>
-                            <figcaption class="w-sm center-block">
-                                <small>
-                                    От простых сайтов до высоко нагруженных приложений.
-                                </small>
-                            </figcaption>
-                        </figure>
+                        <div class='pageOption pull-right'>
+                            <div class='option'>
+                                <img src='https://s-media-cache-ak0.pinimg.com/originals/56/ae/b2/56aeb2e269c54c6075cca37c6892f388.jpg'>
+                            </div>
+                        </div>
+                    </div>
 
-                        <figure class="text-center padder-v">
-                            <p class="padder-v">
-                                <i class="icon-bulb h1"></i>
-                            </p>
 
-                            <p class="text-orchid">Современное</p>
-                            <figcaption class="w-sm center-block">
-                                <small>
-                                    Использует новые возможности языка PHP и базируется на Laravel.
-                                </small>
-                            </figcaption>
-                        </figure>
-                    </article>
-
-                    <article class="col-md-4">
-                        <figure class="text-center padder-v">
-                            <p class="padder-v">
-                                <i class="icon-book-open h1"></i>
-                            </p>
-                            <p class="text-orchid">Прост в освоение</p>
-                            <figcaption class="w-sm center-block">
-                                <small>
-                                    Интуитивное и понятнятное восприятие.
-                                </small>
-                            </figcaption>
-                        </figure>
-
-                        <figure class="text-center padder-v">
-                            <p class="padder-v">
-                                <i class="icon-social-github h1"></i>
-                            </p>
-
-                            <p class="text-orchid">Для любой команды</p>
-                            <figcaption class="w-sm center-block">
-                                <small>
-                                    Легкость управления и развертывания с Git или SVN.
-                                </small>
-                            </figcaption>
-                        </figure>
-                    </article>
 
                 </div>
             </div>
+
 
 
 
         </div>
+
     </section>
---}}
 
 
 
 
 
+    <section class="container-fluid">
 
-    <section class="">
+        <div class="row  bg-white">
+    <div class="container m-t-xxl m-b-xxl">
 
-        <div class="container">
-            <div class="row v-center">
+        <div class="row">
+            <div class="col-md-12">
 
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2 wrapper-md">
+                        <div class="panel panel-default b-light box-shadow">
+                            <div class="panel-hover">
+                                <a href="@url('docs')" class="block wrapper-lg">
+                                    <div class="panel-hover-title b-b">
+                                        <p class="h4">Документация</p>
+                                    </div>
+                                    <div class="panel-hover-body">
+                                        Мы собрали подробную документацию и постоянно дополняем её новыми материалами
+                                    </div>
+                                    <div class="panel-hover-icon">
+                                        <i class="icon-book-open"></i>
+                                    </div>
 
-                <div class="col-md-6 wrapper-xl">
-                    <div class="row row-sm text-center">
-                        <div class="col-xs-12">
-                            <a href="@url('docs')" class="block panel box-shadow-lg padder-v item">
-                                <div class="h1 text-dark font-thin">Документация</div>
-                                <span class="text-muted text-xs">Вся информация в одном месте</span>
-                            </a>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-md-4 wrapper-md">
+                        <div class="panel panel-default b-light box-shadow">
+                            <div class="panel-hover">
+                                <a href="https://github.com/TheOrchid/Platform" target="_blank" class="block wrapper-lg">
+                                    <div class="panel-hover-title b-b">
+                                        <p class="h4">GitHub</p>
+                                    </div>
+                                    <div class="panel-hover-body">
+                                        Код проекта публикуется под свободной лицензией MIT
+                                        и доступен на сервисе github.com
+                                    </div>
+                                    <div class="panel-hover-icon">
+                                        <i class="icon-social-github"></i>
+                                    </div>
 
-                        <div class="col-xs-12">
-                            <a href="https://github.com/TheOrchid/Platform" target="_blank" class="block panel box-shadow-lg padder-v item">
-                                <div class="h1 text-dark font-thin"><i class="icon-social-github"></i></div>
-                                <span class="text-muted text-xs">GitHub</span>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-
                     </div>
                 </div>
 
-
-    <div class="col-sm-6 wrapper-xl">
-        <h3 class="text-dark m-b-lg">Экономь время используя прекрасные инструменты</h3>
-        <ul class="list-unstyled  m-t-xl">
-            <li>
-                <i class="icon-tag pull-left text-lg m-r m-t-sm"></i>
-                <p class="clear m-b-lg"><strong>Построен на Laravel и Angular</strong>, самые популярные и
-                    мощные фреимворки с огромным сообществом </p>
-            </li>
-            <li>
-                <i class="icon-tag pull-left text-lg m-r m-t-sm"></i>
-                <p class="clear m-b-lg"><strong>Использует шаблоны</strong>, снижение сложности за счёт
-                    готовых
-                    абстракций для решения целого класса задач</p>
-            </li>
-            <li>
-                <i class="icon-tag pull-left text-lg m-r m-t-sm"></i>
-                <p class="clear m-b-lg"><strong>Открытый код</strong>, позволяет давать больше доступной и
-                    актуальной информации для разработчика.</p>
-            </li>
-        </ul>
-    </div>
             </div>
+
+        </div>
+
+    </div>
         </div>
     </section>
+
+
+
+
 
 
 

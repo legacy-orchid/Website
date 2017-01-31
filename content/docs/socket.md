@@ -17,20 +17,15 @@ WebSocket разработан для воплощения в web-браузер
 
 ## Установка
 
-1. Установка пакета с помощью composer
-
+Установите пакета с помощью composer
 ```php
 composer require orchid/socket
 ```
-
-1. Добавте сервис провайдер в  config/app.php
-
+Добавьте сервис провайдер в  config/app.php
 ```php
 Orchid\Socket\Providers\SocketServiceProvider::class
 ```
-
-1. Опубликйте файлы настроек и маршрутов
-
+Опубликуйте файлы настроек и маршрутов
 ```php
 php artisan vendor:publish
 ```
@@ -136,8 +131,8 @@ socket.send("Привет");
 ```
 
 
-Рекомендуеться подключать веб сокет через Nginx или HAProxy
-
+Рекомендуеться подключать веб сокет через `Nginx` или `HAProxy`
+    
 Пример настройки для Nginx
 ```php
 map $http_upgrade $connection_upgrade {
@@ -168,7 +163,7 @@ server {
 ```
 
 
-Запуск веб-сокета на рабочей машине рекомендуется осуществлять с помощью Supervisor, так же как и очередь задач в Laravel
+Запуск веб-сокета на рабочей машине рекомендуется осуществлять с помощью `Supervisor`, так же как и очередь задач в Laravel
 
 ```php
 [program:laravel-socket]

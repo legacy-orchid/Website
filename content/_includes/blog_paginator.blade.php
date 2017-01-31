@@ -5,7 +5,7 @@
             @if($previousPage)
                 <li class="previous">
                     <a href="@url($previousPage)">
-                        <span aria-hidden="true">&larr;</span> Newer posts
+                        <i class="icon-arrow-left" aria-hidden="true"></i> Предыдущее
                     </a>
                 </li>
             @endif
@@ -13,7 +13,7 @@
             @if($nextPage)
                 <li class="next">
                     <a href="@url($nextPage)">
-                        <span aria-hidden="true">&rarr;</span> Previous posts
+                        <i class="icon-arrow-right" aria-hidden="true"></i> Новое
                     </a>
                 </li>
             @endif
