@@ -20,6 +20,10 @@ pageTitle: - Записи
 1. publish_at - время публикации
 
 
+```php
+//all objects in the $videos Collection will be instances of Post
+$videos = Post::type('video')->status('publish')->get();
+```
 
 Определение поведения той или иной записи происходит в зависимости от указанного `типа`.
 @endverbatim
