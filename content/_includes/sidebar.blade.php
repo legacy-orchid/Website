@@ -10,10 +10,11 @@
 
     <h4 class="text-orchid font-thin">Приложение</h4>
     <ul class="toc-links">
-        <li><a href="@url('/docs/post')">Post</a></li>
-        <li><s href="@url('/docs/installation')">Fields</s></li>
-        <li><s href="@url('/docs/installation')">Types</s></li>
-        <li><s href="@url('/docs/installation')">Category</s></li>
+        <li><a href="@url('/docs/post')">Записи</a></li>
+        <li><a href="@url('/docs/form')">Формы</a></li>
+        <li><a href="@url('/docs/type')">Типы</a></li>
+        <li><a href="@url('/docs/field')">Поля</a></li>
+        <li><s href="@url('/docs/installation')">Связи</s></li>
     </ul>
 
     <h4 class="text-orchid font-thin">Основы</h4>
