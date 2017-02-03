@@ -20,10 +20,26 @@ pageTitle: - Записи
 1. publish_at - время публикации
 
 
+Определение поведения той или иной записи происходит в зависимости от указанного `типа`.
 ```php
-//all objects in the $videos Collection will be instances of Post
+//Получить все эеземпляры коллекции $video
 $videos = Post::type('video')->status('publish')->get();
 ```
 
-Определение поведения той или иной записи происходит в зависимости от указанного `типа`.
+
+###Taxonomies
+
+Вы можете получить таксонометию для конкретной записи:
+
+```php
+$post = Post::find(1);
+$taxonomy = $post->taxonomies()->first();
+echo $taxonomy->taxonomy;
+```
+Или вы можете искать, используя свои таксонометрии:
+
+```php
+$post = Post::taxonomy('category', 'php')->first();
+```
+
 @endverbatim
