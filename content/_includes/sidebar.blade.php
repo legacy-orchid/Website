@@ -14,20 +14,19 @@
         <li><a href="@url('/docs/form')">Формы</a></li>
         <li><a href="@url('/docs/type')">Типы</a></li>
         <li><a href="@url('/docs/field')">Поля</a></li>
-        <li><s href="@url('/docs/installation')">Связи</s></li>
+        <li><a href="@url('/docs/post')">Таксонометрия</a></li>
     </ul>
 
     <h4 class="text-orchid font-thin">Основы</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/access')">Права доступа</a></li>
-        <li><s href="@url('/docs/logs')"><a>Журнал</a></s></li>
+        <li><a href="@url('/docs/logs')"><a>Журнал</a></a></li>
         <li><a href="@url('/docs/widget')">Виджеты</a></li>
         <li><a href="@url('/docs/settings')">Настройки</a></li>
         <li><a href="@url('/docs/extends')">Расширение</a></li>
         <li><a href="@url('/docs/alert')">Уведомления</a></li>
         <li><a href="@url('/docs/active')">Активные ссылки</a></li>
         <li><a href="@url('/docs/tags')">Тегирование</a></li>
-        <li><s href="@url('/docs/installation')">Локализация</s></li>
     </ul>
 
 

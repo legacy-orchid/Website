@@ -17,10 +17,10 @@
 
 
                         <div class="page-header">
-                            <p class="h1 l-h-1x text-dark">Надёжное управление для Вашего проекта</p>
+                            <p class="h1 l-h-1x text-dark font-thin">Основа твоего проекта</p>
                         </div>
 
-                        <p class="h1 l-h-1x m-t-xl padder-v ">
+                        <p class="h1 l-h-1x m-t-md padder-v ">
                             <small>
                                 Мы хотим подарить мощную и гибкую платформу способную<br> на решение не стандартных задач
                             </small>
@@ -33,7 +33,7 @@
 
                         <div class='pageOption pull-right'>
                             <div class='option'>
-                                <img src='https://s-media-cache-ak0.pinimg.com/originals/56/ae/b2/56aeb2e269c54c6075cca37c6892f388.jpg'>
+                                <img src='@url('assets/img/main.jpeg')'>
                             </div>
                         </div>
                     </div>

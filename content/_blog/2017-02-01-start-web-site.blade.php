@@ -3,19 +3,16 @@
 @section('post::title', 'Запуск веб-сайта')
 @section('post::date', '1 Февраля, 2017')
 @section('post::image','/assets/img/post/start.jpg')
-@section('post::brief', 'Начата работа по написанию документации')
+@section('post::brief', 'Место где, каждый найдёт что то для себя')
 @section('pageTitle')- @yield('post::title')@stop
 
 @section('post_body')
 
     @markdown
-    The easiest way to accomplish visual balance is to align elements and structure designs with a clear grid. It guides us in the right direction when placing elements and determine dimensions, and it makes it easier for the user to process the interface.
+        Для популизирации и совместной написании документации, нами было принято запустить небольшой сайт.
+        Мы сделали его спомощью замечательного приложения [Katana](https://github.com/themsaid/katana)
 
-    > Design for change
-
-    No design is ever finished or done. Don’t be afraid of throwing away work, features or designs, good design is always evolving and grows with the business. Design with change in mind will allow us to quickly adapt to new learnings and insights. Every feature or functionality that is introduced needs time to improve. Once something is launched, evaluating performance and iteration should be the focus.
-
-    [Read the complete article on Medium](https://medium.com/@WdeB/digital-product-design-principles-8bc9eb6c080c)
+        ![Katana static site & blog generator](http://s14.postimg.org/a1gqg2zs1/katana.jpg)
     @endmarkdown
 
 @stop

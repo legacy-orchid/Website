@@ -62,7 +62,7 @@ return [
      *
      */
 
-    'siteName' => 'Orchid - PHP платформа',
+    'siteName' => 'Orchid - Laravel platform',
 
     'siteDescription' => 'Мощная и гибкая платформа на базе Laravel',
 ];

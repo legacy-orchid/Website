@@ -46,12 +46,12 @@ active('login', 'users/*', 'posts.*', 'pages.contact');
 active(['login', 'logout'], 'active-class');
 ```
 
+В первом примере, функция вернет строку `активна`, если текущий путь `login`, начинается с `users/`  или если имя текущего маршрута `posts.create`.
 
-In the first example, the function will return the string `active` if the current path is `login`, starts with `users/` or if the name of the current route is `posts.create`.
+Обратите внимание, что ряд типов аргументов при условии: вы можете использовать строку пути с группового символа (с использованием `*`), и вы можете также использовать именнованые маршруты.
 
-Do note that a number of argument types are provided: you can use a path string, you can use a path string with a wildcard (using the `*`) and you can also use named routes.
+Вы можете использовать эту функцию с вашими ссылками, чтобы дать им активное состояние.
 
-You can use this function with your links to give them an active state.
 
 
 ```php
@@ -61,7 +61,7 @@ You can use this function with your links to give them an active state.
 ```
 
 
-You can also provide certain paths or routes to be exluded when being considered.
+Вы также можете указать определенные пути или маршруты, которые будут исключены на стадии рассмотрения.
 
 
 ```php
@@ -73,7 +73,7 @@ active(['pages.*', 'not:pages.contact'])
 
 ### Using `is_active()`
 
-This works much the same as `active()`, you can pass the paths and routes to it but instead it will return a boolean if the current page matches. 
+Это работает так же, как `active()`, вы можете передать пути и маршруты к ним, но вместо этого он будет возвращать логическое значение, если текущая страница соответствует.
 
 
 ```php
@@ -85,7 +85,7 @@ This works much the same as `active()`, you can pass the paths and routes to it 
 
 ### Additional helpers
 
-Two additional functions are provided to get the current controller and action, if your routing is being handled by a controller for a request. These functions will return the lowercase controller/action name, without the method of the request. Here is an example for a request that is routed to `FooController@getBar':
+Две дополнительные функции предусмотрены для получения текущего контроллера и действия, если ваш маршрутизации обрабатывается контроллером для запроса. Эти функции будут возвращать имя в нижнем регистре контроллер/действие, без метода запроса. Ниже приведен пример для запроса, который направляется в `FooController@GetBar`:
 
 
 ```php

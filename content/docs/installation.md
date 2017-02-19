@@ -7,12 +7,12 @@ pageTitle: - Some Markdown
 #Installation 
 ----------
 
-Orchid based off [Laravel Framework](http://laravel.com), so before you put the Orchid, you must install [Laravel](http://laravel.com).
+Orchid основан на [Laravel Framework](http://laravel.com), по этому сначала необходимо [установаить его](http://laravel.com).
 
 
-### Via Composer
+### Composer
 
-Add the project according
+Добавьте в композер следующий пакет
 ```php
 "require": {
     "orchid/platform": "dev-master"
@@ -21,14 +21,10 @@ Add the project according
 
 ###  Provider and Facades
 
+Добавьте следующие строчки в конфигурационный файл `config/app`
 
-Add the following elements in the configuration file `config/app`
 ```php
-Orchid\Settings\Providers\SettingsServiceProvider::class,
 Orchid\Foundation\Providers\FoundationServiceProvider::class,
-Orchid\Widget\Providers\WidgetServiceProvider::class,
-Orchid\Installer\Providers\InstallerServiceProvider::class,
-Orchid\Alert\AlertServiceProvider::class,
 ```
 
 ```php
@@ -41,7 +37,7 @@ Orchid\Alert\AlertServiceProvider::class,
 
 ### Config
 
-Change the following entry in the configuration file`config/auth.php`
+Измените следующую запись в файле конфигурации `config/auth.php`
 
 ```php
     'providers' => [
@@ -51,7 +47,7 @@ Change the following entry in the configuration file`config/auth.php`
         ],
 ```
 
-or inherit model App\User
+или унаследуйте модель App\User
 
 ```php
 <?php
@@ -70,7 +66,7 @@ class User extends UserOrchid
 
 ### Publish
 
-To publish a package in your application, use the command
+Для того, чтобы опубликовать пакет в вашем приложении, используйте команду
 ```php
 php artisan vendor:publish
 php artisan migrate
@@ -80,13 +76,18 @@ php artisan migrate
 ### Creating administrator
 
 
-To create a user with the maximum (at time of writing) rights
-run the following command:
+Для создания пользователя с максимальными (На момент создания) правами необходимо выполнить следующую команду:
 
 
 ```php
 php artisan make:admin nickname email@email.com secretpassword
 ```
 
-> **Note:** Remember that the next update will not change the data.
+> **Примечание:**  Помните, что следующие обновление не изменяет данные.
 @endverbatim
+
+
+
+### Production
+
+На самом деле пакет имеет графический установщик который помогает установить приложение, для его активации просто перейдите адресу сайта
