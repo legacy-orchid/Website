@@ -1,46 +1,44 @@
 <nav class="nav-docs">
-    <h4 class="text-orchid font-thin">Как начать</h4>
+    <h4 class="text-orchid font-thin">Get Started</h4>
     <ul class="toc-links">
-        <li><a href="@url('/docs')">Главная</a></li>
-        <li><a href="@url('/docs/installation')">Установка</a></li>
-        <li><s>Обновление</s></li>
-        <li><a href="@url('/docs/roudmap')">Дорожная карта</a></li>
+        <li><a href="@url('/')">Home</a></li>
+        <li><a href="@url('/docs/screenshot')">Screenshot</a></li>
+        <li><a href="@url('/docs/installation')">Installation</a></li>
     </ul>
 
 
-    <h4 class="text-orchid font-thin">Приложение</h4>
+    <h4 class="text-orchid font-thin">The Application</h4>
     <ul class="toc-links">
-        <li><a href="@url('/docs/post')">Записи</a></li>
-        <li><a href="@url('/docs/form')">Формы</a></li>
-        <li><a href="@url('/docs/type')">Типы</a></li>
-        <li><a href="@url('/docs/field')">Поля</a></li>
-        <li><a href="@url('/docs/post')">Таксонометрия</a></li>
+        <li><a href="@url('/docs/post')">Post</a></li>
+        <li><a href="@url('/docs/post')">Taxonomies</a></li>
+        <li><a href="@url('/docs/form')">Form</a></li>
+        <li><a href="@url('/docs/type')">Type</a></li>
+        <li><a href="@url('/docs/field')">Field</a></li>
     </ul>
 
-    <h4 class="text-orchid font-thin">Основы</h4>
+    <h4 class="text-orchid font-thin">Basics</h4>
     <ul class="toc-links">
-        <li><a href="@url('/docs/access')">Права доступа</a></li>
-        <li><a href="@url('/docs/logs')"><a>Журнал</a></a></li>
-        <li><a href="@url('/docs/widget')">Виджеты</a></li>
-        <li><a href="@url('/docs/settings')">Настройки</a></li>
-        <li><a href="@url('/docs/extends')">Расширение</a></li>
-        <li><a href="@url('/docs/alert')">Уведомления</a></li>
-        <li><a href="@url('/docs/active')">Активные ссылки</a></li>
-        <li><a href="@url('/docs/tags')">Тегирование</a></li>
-    </ul>
-
-
-
-    <h4 class="text-orchid font-thin">Пакеты</h4>
-    <ul class="toc-links">
-        <li><a href="@url('/docs/socket')">Веб-сокет</a></li>
+        <li><a href="@url('/docs/access')">Access</a></li>
+        <li><a href="@url('/docs/logs')">Logs</a></li>
+        <li><a href="@url('/docs/widget')">Widget</a></li>
+        <li><a href="@url('/docs/settings')">Settings</a></li>
+        <li><a href="@url('/docs/extends')">Extends</a></li>
+        <li><a href="@url('/docs/alert')">Alert</a></li>
+        <li><a href="@url('/docs/active')">Active</a></li>
+        <li><a href="@url('/docs/tags')">Tags</a></li>
     </ul>
 
 
-    <h4 class="text-orchid font-thin">Участиве в проекте</h4>
+
+    <h4 class="text-orchid font-thin">Packages</h4>
     <ul class="toc-links">
-        <li><a href="@url('blog')">Блог</a></li>
-        <li><a href="@url('/docs/contributors')">Участие в разработке</a></li>
-        <li><a href="@url('/docs/license')">Лицензия</a></li>
+        <li><a href="@url('/docs/socket')">Socket</a></li>
+    </ul>
+
+
+    <h4 class="text-orchid font-thin">Contributing</h4>
+    <ul class="toc-links">
+        <li><a href="@url('/docs/contributors')">Guidelines</a></li>
+        <li><a href="@url('/docs/license')">License</a></li>
     </ul>
 </nav>

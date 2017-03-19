@@ -43,12 +43,21 @@
         <div class="container padder-v">
 
 
-            <div class="row">
+            <div class="row v-center">
 
-                <div class="col-md-6 col-md-offset-6">
+                <div class="col-md-6">
+                    <div class="">
+                        <a href="https://github.com/TheOrchid/Platform" target="_blank">
+                            <span class="text-md block"><i class="icon-social-github"></i> GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
                     <div class="pull-right text-right">
                         <span class="text-md block">The Orchid</span>
-                        <small>Код приложения опубликован под лицензией MIT</small>
+                        <small>The application code is published under the MIT license</small>
                     </div>
                 </div>
             </div>

@@ -1,61 +1,57 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Участие в разработке
+pageTitle: - Contributor Guidelines
 ---
 @verbatim
-#Участие в разработке
+# Contributor Guidelines
 ----------
 
-Я призываю всех внести свой вклад в проект Orchid. 
-Вы можете найти последнюю версию кода на `GitHub` по адресу <https://github.com/TheOrchid/Dashboard>.
+I encourage everyone to contribute to the Orchid project.
+You can find the latest version of the GitHub code at <https://github.com/TheOrchid/Platform>.
 
-##Отслеживание проблем
+## Problem Tracking
 
-Вы можете найти нерешенные вопросы на GitHub Issues Tracker (https://github.com/TheOrchid/Platform/issues). 
-Если вы намерены работать по конкретному вопросу, оставьте комментарий на соответствующий задачу для информирования других участников проекта.
+You can find unresolved issues on the [GitHub Issues Tracker](https://github.com/TheOrchid/Platform/issues).
+If you intend to work on a specific issue, leave a comment on the relevant task to inform other project participants.
 
 
-Для активного развития, настоятельно рекомендуется использовать только запросы на добавление изменений `(pull requests)`, а не просто сообщения об ошибках (bug reports).
+For active development, it is highly recommended to use only requests for adding changes `(pull requests)`, and not just bug reports.
 
-Если вы создали отчёт об ошибке, то он должен содержать заглавие и чёткое описание проблемы.
-Вы так же должны включить в него как можно более полную информацию и пример кода, которые помогут воспроизвести проблему.
-Основная цель отчёта об ошибке - упростить локализацию, воспроизведение проблемы и поиск её решения.
+If you created an error report, it should contain a title and a clear description of the problem.
+You should also include as much information and code as possible to help you reproduce the problem.
+The main purpose of the error report is to simplify the localization, the reproduction of the problem and the search for its solution.
 
-Также помните, что отчёты об ошибках создаются в надежде, что другие пользователи с такими же проблемами смогут принять участие в их решении вместе с вами.
-Но не ждите, что другие всё бросят и начнут исправлять вашу проблему.
- 
- Отчёт об ошибке призван помочь вам и другим `_начать совместную работу_` над решением проблемы.
+Also, remember that error reports are created in the hope that other users with the same problems will be able to participate in their decision along with you.
+But do not expect others to drop everything and start fixing your problem. The error report is designed to help you and others to start working together to solve the problem.
 
 
 
-## Участие в основных обсуждениях
+## Participation in the main discussions
 
-Вы можете предложить новые функции и усовершенствования существующего поведения Orchid.
-Если вы предлагаете новую функцию, пожалуйста, будьте готовы выполнять по крайней мере, примеры кода, которые будут необходимы для вызова/использования этой функции.
-
-Неформальное обсуждение по поводу ошибок, новых возможностей, а также реализация существующих функций происходит в gitter.im канале Orchid.
+You can suggest new features and improvements to existing Orchid behavior.
+If you are offering a new feature, please be prepared to perform at least the code samples that will be needed to call / use this function.
 
 
-## Уязвимости в безопасности
+## Security
 
-Если вы обнаружили уязвимость в безопасности внутри Orchid, пожалуйста отправьте e-mail почту `bliz48rus(at)gmail.com`. 
-Все такие уязвимости будут незамедлительно рассмотрены.
+If you find a security vulnerability inside Orchid, please send an e-mail to `bliz48rus(at)gmail.com`.
+All such vulnerabilities will be immediately reviewed.
 
 
 
 
-## Стиль написания кода
+## Code writing style
 
-Orchid следует [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide-meta.md) и [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) стандартам.
+Orchid follows [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide-meta.md) and [PSR-4](Https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) standards.
 
 
-Вы можете использовать PHP-CS-Fixer, чтобы исправить свой стиль кода перед публикацией.
+You can use PHP-CS-Fixer to fix your code style before publishing.
 
-Чтобы приступить к работе, установите инструмент на глобальном уровне и проверьте стиль кода, выполнив следующую команду из терминала корневой директории вашего проекта:
+To get started, install the tool at the global level and check the code style by running the following command from the terminal of the root directory of your project:
 
-```php
+````php
 php-cs-fixer fix
-```
+````
 
 @endverbatim

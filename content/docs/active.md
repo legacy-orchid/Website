@@ -1,58 +1,46 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Активные ссылки
+pageTitle: - Active
 ---
 @verbatim
-#Активные ссылки
+# Active
 ----------
 
+Active links - is an auxiliary package that makes it easy to recognize
+  current path (Url) or route (Route), very useful for adding a class
+  "Active" (for example, those used in the Bootstrap), as well as the implementation of
+  various actions only if a particular route is active.
+It also includes a helper to get the current controller and action names.
 
+## Using Active
+----------
+### Helper functions
 
-Активные ссылки - это вспомогательный пакет, который позволяет легко распознать
- текущий путь (Url) или маршрут (Route), очень полезный для добавления класса
- "active" (например, те, которые используются в Bootstrap), а также выполнения
- различных действий, только тогда, когда определённый маршрут активен.
-Она также включает в себя помощников для получения текущего контроллера и действия имен.
-
-
-
-## Использование
-
-### Вспомогательные функции
-
-
-Вспомогательные функций, дают возможность использования без фасада или создания экземпляра класса.
+Active ships with a couple of helper functions which make it easy to use without the facade or creating an instance of your own.
 
 ```php
 active()
 is_active()
 ```
 
-### Использование `active()`
+### Using `active()`
 
-
-Вы передаете массив маршрутов и путей, которые вы хотите видеть.
-Если какой-либо маршрут совпадёт, функция возвратит строку `active`. 
-В качестве альтернативы, вы можете передать свою строку для возврата в качестве второго аргумента.
-
+You pass an array of routes or paths you want to see are the current page, and if any match this function will return the string `active`, for Bootstrap. Alternatively, you can pass a custom return string as the second argument.
 
 ```php
-
 // Returns 'active' if the current route matches any path or route name.
 active('login', 'users/*', 'posts.*', 'pages.contact'); 
 
- // Returns 'active-class' if the current route is 'login' or 'logout'.
-active(['login', 'logout'], 'active-class');
+// Returns 'active-class' if the current route is 'login' or 'logout'.
+active(['login', 'logout'], 'active-class'); 
 ```
 
-В первом примере, функция вернет строку `активна`, если текущий путь `login`, начинается с `users/`  или если имя текущего маршрута `posts.create`.
+In the first example, the function will return the string `active` if the current path is `login`, starts with `users/` or if the name of the current route is `posts.create`.
 
-Обратите внимание, что ряд типов аргументов при условии: вы можете использовать строку пути с группового символа (с использованием `*`), и вы можете также использовать именнованые маршруты.
+Do note that a number of argument types are provided: you can use a path string, you can use a path string with a wildcard (using the `*`) and you can also use named routes.
 
-Вы можете использовать эту функцию с вашими ссылками, чтобы дать им активное состояние.
-
-
+You can use this function with your links to give them an active state.
 
 ```php
 <a href="{{ route('posts.index') }}" class="{{ active('posts.index') }}">
@@ -60,9 +48,7 @@ active(['login', 'logout'], 'active-class');
 </a>
 ```
 
-
-Вы также можете указать определенные пути или маршруты, которые будут исключены на стадии рассмотрения.
-
+You can also provide certain paths or routes to be exluded when being considered.
 
 ```php
 active(['pages/*', 'not:pages/contact'])
@@ -70,11 +56,9 @@ active(['pages/*', 'not:pages/contact'])
 active(['pages.*', 'not:pages.contact'])
 ```
 
-
 ### Using `is_active()`
 
-Это работает так же, как `active()`, вы можете передать пути и маршруты к ним, но вместо этого он будет возвращать логическое значение, если текущая страница соответствует.
-
+This works much the same as `active()`, you can pass the paths and routes to it but instead it will return a boolean if the current page matches. 
 
 ```php
 @if (is_active('posts/*'))
@@ -82,11 +66,9 @@ active(['pages.*', 'not:pages.contact'])
 @endif
 ```
 
-
 ### Additional helpers
 
-Две дополнительные функции предусмотрены для получения текущего контроллера и действия, если ваш маршрутизации обрабатывается контроллером для запроса. Эти функции будут возвращать имя в нижнем регистре контроллер/действие, без метода запроса. Ниже приведен пример для запроса, который направляется в `FooController@GetBar`:
-
+Two additional functions are provided to get the current controller and action, if your routing is being handled by a controller for a request. These functions will return the lowercase controller/action name, without the method of the request. Here is an example for a request that is routed to `FooController@getBar':
 
 ```php
 $controller = controller_name(); // foo

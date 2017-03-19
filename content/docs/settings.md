@@ -1,29 +1,29 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Настройки
+pageTitle: - Settings
 ---
 @verbatim
-#Настройки
+# Settings
 ----------
 
-Настройки (settings) — это хранилище `"ключ-значение"` является простейшим хранилищем данных,
-использующим ключ для доступа к значению. Такие хранилища используются для хранения настроек,
-создания специализированных файловых систем, в качестве кэшей для объектов, а также в системах,
-спроектированных с прицелом на масштабируемость. В рамках Orchid настройки реализованы с помощью модели которая использует мутацию.
-
-###Использование :
+Settings - a repository of "key-value" is the simplest data storage,
+Use the key to access the value. Such storage is used to store settings,
+creation of specialized file systems, as caches for objects as well as systems,
+designed with an eye on scalability. Within Orchid configuration implemented using a model which uses mutation.
+### Using :
 	
-Заметье, что помещать в хранилище можно не только переменные простых типов, но и массивы.
-В хранилище массивы будут преобразованы в JSON, а при получени значения произойдёт его декодирование.
 
-Чтобы добавить новое значение в хранилище необходимо использовать
+Noticed that you can not just put a simple variable types, but also in storage arrays.
+The storage array will be converted to JSON, and in the preparation of its value happens decoding.
+
+
+To add a new value to the repository you want to use
 ```php
 Settings::set($key,$value);
 ```
 
-
-Для получения значения:
+For values:
 ```php
 /**
 * @param string|array $key
@@ -32,7 +32,7 @@ Settings::set($key,$value);
 Settings::get($key, $default);
 ```
 
-Для удаления значения:
+To delete the value:
 ```php
 /**
 * @param string|array $key
@@ -41,11 +41,12 @@ Settings::get($key, $default);
 Settings::forget($key);
 ```
 
-Заметье, что вы можете получить или удалить сразу несколько значений из хранилища, для этого необходимо передать первым аргуметом массив с именами ключей.
+
+Note that you can get, or remove multiple values ​​from the repository, it is necessary to pass the first has argument array with the names of the keys.
 
 
 
-По умолчанию каждый элемент кешируется до его изменения, в случаи если вам нужно получить значение не из кэша воспользуйтесь методом "getNoCache"
+By default, each item cached until you change it, if you need to get the value from the cache does not use the method of "getNoCache"
 ```php
 Settings::getNoCache($key, $default = null);
 ```

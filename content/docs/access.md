@@ -1,82 +1,83 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Разграничение прав доступа
+pageTitle: - Differentiation of access rights
 ---
 @verbatim
-#Разграничение прав доступа
+# Differentiation of access rights
 ----------
-Управление доступом на основе ролей — развитие политики избирательного управления доступом, 
-при этом права доступа субъектов системы на объекты группируются с учётом специфики их применения, 
-образуя роли.
+Role based access control - the development of selective access control policy,
+while permissions system subjects to objects are grouped with regard to their specific application,
+forming role.
 
-Формирование ролей призвано определить чёткие и понятные для пользователей 
-правила разграничения доступа. Ролевое разграничение доступа позволяет реализовать гибкие, 
-изменяющиеся динамически в процессе функционирования системы правила разграничения доступа.
+Formation of roles is intended to define clear and understandable for users
+access control rules. Role-based access control allows for flexible,
+changing dynamically during operation of the rules of access control systems.
 
-##Middleware
+## Middleware
 
-Проверка доступа по умолчанию осуществляется на стадии Middleware, 
-поэтому если вы хотите проверять добавьте его (По умолчанию он уже зазервирован и вы можете без болезнено его использовать)
+Default Access Middleware Testing is carried out on the stage,
+so if you want to scan, add it (By default, it is already reserved, and you can use it without disease)
 
 ```php
 'dashboard' => \Orchid\Access\Middleware\AccessMiddleware::class,
 ```
 
-##Пользователь
+## User
 
-Пользователь имеет ряд возможностей по управлению ролями
+The user has several options for managing roles
 
 ```php
-//Проверяет есть ли у пользователя расширение
-//Проверка осуществляется как у него самого, так и у его ролей
+// Check if the user has an extension
+// Verification carried out both in himself and in his role
 Auth:user()->hasAccess($string);
 
-//Получить разрешения пользователя
+// Get the user's permission
 Auth:user()->getPermissionsAttribute($permissions);
 
-//Установить разрешения доступов
+// Set the access permissions
 Auth:user()->setPermissionsAttribute($permissions)
 
-//Получить все роли пользователя
+// Get all the user role
 Auth:user()->getRoles();
 
-//Проверить есть ли у пользователя роль
+// Check if the user has a role
 Auth:user()->inRole($role)
 
-//Добавляет пользователю роль
+// Add a user role
 Auth:user()->addRole($role)
 ```
 
 
 
-##Роли
+## Roles
 
-Роли так же имеют процедуры:
+Roles also have procedures for:
 
 ```php
 $role = Role::getRoleSlug($string);
 
-// Возвращает всех пользователей имеющих данную роль
+// Returns all users with this role
 $role->getUsers();
 
-//Получает разрешения роли
+// Gets the permission roles
 $role->getPermissionsAttribute($permissions);
 
-//Устанавливает разрешения для роли
+// Set the permissions for the role
 $role->setPermissionsAttribute($permissions);
 ```
 
 
-## Создание администратора
+## Creating administrator
 
-Для создания пользователя с максимальными (На момент создания) правами
-необходимо выполнить следующую команду:
+To create a user with the maximum (at time of writing) rights
+run the following command:
 
 
 ```php
 php artisan make:admin nickname email@email.com secretpassword
 ```
+
 
 
 ## Adding your own permissions

@@ -1,19 +1,19 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Some Markdown
+pageTitle: - Fields
 ---
 @verbatim
-#Поля
+# Fields
 ----------
 
-Поля используются для генерации шаблонного вывода формы заполнения/редактирования
+Fields are used to generate a template output of the fill / edit form
 
-Все возможные поля определены в  `config/content.php` в разделе fields
-Каждое поле может быть использованно в типе и если вам нужно создать своё не стесняйтесь.
-Поле состоит из одного класса с обязательным методом `create` который должен возравщать 'view' для отображения пользователю
- 
-Как вы наверное заметили перечисления полей в типе, похоже на перечесление параметров для валидации, только тут вы можете передавать любые параметры в своё поле:
+All possible fields are defined in `config / content.php` in the fields section
+Each field can be used in a type and if you need to create your own do not hesitate.
+The field consists of one class with the obligatory `create` method, which must raise the 'view' to display to the user
+ 
+As you probably noticed the enumerations of fields in the type, it seems that the parameters have been cross-checked for validation, only here you can pass any parameters to your field:
 
 ```php
 return [

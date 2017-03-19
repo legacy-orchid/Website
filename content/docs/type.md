@@ -1,19 +1,19 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Типы
+pageTitle: - Types
 ---
 @verbatim
-#Типы 
+#Types 
 ----------
 
-Типы основная часть Orchid, заместо генерации CRUD для каждой модели
-Вы можете выделить какую либо сущность в отдельный тип и с лёгкостью оперировать ею
+Types are the main part of Orchid, instead of generating a CRUD for each model
+You can select any entity in a separate type and easily operate it
 
 
-Собственные типы необходимо регистрировать в `config/content.php` в разделе types
+Own types must be registered in `config/content.php` in the types section
 
-Тип выглядит следующим образом:
+The type looks like this:
 
 ```php
 <?php
@@ -107,14 +107,15 @@ class TestType extends Type
 
 ```
 
-Где:
-1. $name - имя типа
-1. $slug - уникальное значение явно пределяющие данный тип
-1. $slugName отвечат за генерацию ЧПУ по полю
-1. rules() - правила валидации
-1. fields() - требуемые поля
-1. modules() - реализующие формы
-1. grid() - отображение таблицы
+Where:
+1. $ name - type name
+1. $ slug - a unique value that explicitly defines this type
+1. $ slugName is responsible for generating the CNC in the field
+1. rules () - validation rules
+1. fields () - required fields
+1. modules () - realizing forms
+1. grid () - displaying the table
 
-Вы можете расширять данные тип все ми доступными методами, что бы добавлять в него новый функционал отвечающего Вашему приложению
- @endverbatim
+You can extend the data type with all the available methods to add a new functionality to it that corresponds to your application
+ 
+@endverbatim

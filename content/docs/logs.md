@@ -1,12 +1,13 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Some Markdown
+pageTitle: - Error log
 ---
 @verbatim
-#Журнал ошибок
+#Error log
 ----------
 
-Laravel использует для логгирования популярную библиотеку Monolog, Orchid использует
-парсер логирования, который позволяет получать данные для построения и анализа.
+Laravel uses for logging the popular library Monolog, Orchid uses
+A logging parser that allows you to obtain data for building and analysis.
+
 @endverbatim

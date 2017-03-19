@@ -1,47 +1,47 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Тег
+pageTitle: - Tag
 ---
 @verbatim
-#Тег
+# Tag
 ----------
 
-Тег (метка) — слово или фраза которая может объединять группу текста, изображений и т.п по теме или 
+Tag - a word or phrase that can unite a group of text, images etc on or
 
 
-###Добавление :
+### Feature:
 
-В этом разделе мы покажем, как вы можете управлять своими субъектами тегов.
-		
+In this section we will show how you can manage your entities tags.
+
 ```php
 // Get the entity object
-$post = Post::find(1);
+$post = Post::find (1);
 
 // Through a string
 $post->tag('foo, bar, baz');
 
 // Through an array
-$post->tag([ 'foo', 'bar', 'baz' ]);
+$post->tag([ 'foo', 'bar', 'baz']);
 ```
 
 
 
 
-###Удаление :
+### Removal:
 
-Удаляет один или несколько тегов  объекта через массив или
-через строку разделенных сущности разделителем.
-		
+Removes one or more tags in an array or object
+through a string delimiter separated entities.
+
 ```php
 // Get the entity object
-$post = Post::find(1);
+$post = post::find(1);
 
 // Through a string
 $post->untag('bar, baz');
 
 // Through an array
-$post->untag([ 'bar', 'baz' ]);
+$post->untag(['bar', 'baz']);
 
 // Remove all the tags
 $post->untag();
@@ -49,13 +49,13 @@ $post->untag();
 
 
 
-###Настройка :
+### Setup:
 
-Этот метод очень похож на метод tag(), но он сочетает в себе untag (),
-так что он автоматически идентифицирует теги для добавления и удаления.
-Это очень полезный метод при запуске обновления на субъектов,
-и вы не хотите иметь дело с проверками, чтобы проверить, 
-какие теги должны быть добавлены или удалены.
+This method is very similar to the method tag (), but it combines untag (),
+so that it automatically identifies the tag to add and remove.
+This is a very useful method when you run an update on the subjects,
+and you do not want to deal with checks to ensure that
+Tags which are to be added or removed.
 
 ```php
 // Get the entity object
@@ -65,18 +65,18 @@ $post = Post::find(1);
 $post->setTags('foo, bar, baz');
 
 // Through an array
-$post->setTags([ 'foo', 'bar', 'baz' ]);
+$post->setTags(['foo', 'bar', 'baz']);
 
 // Using the `slug` column
-$post->setTags([ 'foo', 'bar', 'baz' ], 'slug');
+$post->setTags(['foo', 'bar', 'baz'], 'slug');
 ```
 
 
-###Чтение  :
+### Read:
 
-У нас есть некоторые методы, чтобы помочь вам получить все теги, 
-прикрепленные к объекту и делать обратное и получить все объекты 
-с заданными тегами.
+We have some techniques to help you get all the tags,
+attached to an object and do the opposite and get all objects
+with predetermined tags.
 
 ```php
 // Get the entity object

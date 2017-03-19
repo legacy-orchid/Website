@@ -1,24 +1,24 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Формы
+pageTitle: - Forms
 ---
 @verbatim
-#Формы
+# Forms
 ----------
- 
-Форма это независимая часть приложения, которая берёт на себя функцию контроллера и служит для реализации CRUD.
+ 
+The form is an independent part of the application, which takes on the function of the controller and serves to implement the CRUD.
 
-В Orchid существуют формы двух видов: 
-1. Базовая
-1. Реализующая
+Orchid has two forms:
+1. The basic
+1. Realizing
 
 
-###Базовая форма
+### Basic Form
 
-Базовая форма отличается от реализующей только тем, что к ней можно `подключать неограниченное число реализующих`, по средством вызова `события`.
+The basic form differs from realizing only by the fact that it is possible to `connect an unlimited number of implementers` by means of calling` events`.
 
-Пример базовой формы:
+Example of the basic form:
 ```php
 <?php
 
@@ -64,13 +64,13 @@ class RoleFormGroup extends FormGroup
 
 ```
 
-###Реализующая форма
+### Implementing form
 
-Форма на которой происходит `сохранение/обновление` данных. Заметье, что форма иммеет собственные свойства валидации.
-Каждая реализующая форма будет запускаться по очереди не зная ничего о предыдущей или последующей.
-Написание формы не должно вызвать никаких затруднений, так как он имеет вид обычного контроллера.
+The form on which the data is `saved/updated`. A notion that the form has its own properties of validation.
+Each implementing form will be run in turn without knowing anything about the previous or subsequent.
+Writing a form should not cause any problems, since it looks like a regular controller.
 
-Пример:
+Example:
 ```php
 <?php
 
@@ -167,8 +167,7 @@ class BaseRolesForm extends Form
 
 ```
 
-
-Тогда ваш `контроллер` будет выглядеть приблизительно так:
+Then your `controller` will look like this:
 
 ```php
 <?php

@@ -1,16 +1,16 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Уведомления
+pageTitle: - Alert
 ---
 @verbatim
-#Уведомления
+# Alert
 ----------
-Уведомление — это одноразовое сообщение, которое будет удалено при следующем обращении.
-Уведомления призваны информировать о происходящих событиях, связанных с вами на сайте.
+Alert - this is a one-time message will be deleted the next time.
+Notifications are designed to inform about current events related to your website.
 
-Orchid имеет удобный вызов и отображение уведомлений по верх одноразовых `flash-данных`.
-##Использование
+Orchid has a convenient call and display notifications on the top of the disposable flash-data.
+### Using:
 
 ```php
 public function store()
@@ -20,7 +20,7 @@ public function store()
 }
 ```
 
-Вы также можете сделать:
+You can also:
 
 ```php
 Alert::info('Message')
@@ -30,13 +30,12 @@ Alert::warning('Message')
 ```
 
 
-При использовании, будет установлено несколько ключей в сессии:
 
-- `'flash_notification.message'` - Сообщение для отображения
-- `'flash_notification.level'` - Строка, представляющая тип уведомления (хорошо для применения имен HTML класса)
+In use, it is found more keys in the session:
+- 'flash_notification.message' - Message to display
+- 'flash_notification.level' - A string representing the type of notification (good for applying HTML class names)
 
-
-Для отображения в необходимом месте требуется:
+To display in the desired position requires:
 ```html
 <div class="container">
     @include('dashboard::partials.alert')
