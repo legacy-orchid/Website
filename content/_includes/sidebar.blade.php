@@ -21,7 +21,7 @@
         <li><a href="@url('/docs/logs')">Logs</a></li>
         <li><a href="@url('/docs/widget')">Widget</a></li>
         <li><a href="@url('/docs/settings')">Settings</a></li>
-        <li><a href="@url('/docs/extends')">Extends</a></li>
+        {{--<li><a href="@url('/docs/extends')">Extends</a></li>--}}
         <li><a href="@url('/docs/alert')">Alert</a></li>
         <li><a href="@url('/docs/active')">Active</a></li>
         <li><a href="@url('/docs/tags')">Tags</a></li>
