@@ -6,9 +6,9 @@ pageTitle: - Differentiation of access rights
 @verbatim
 # Differentiation of access rights
 ----------
-Role based access control - the development of selective access control policy,
+Role-based access control - the development of selective access control policy,
 while permissions system subjects to objects are grouped with regard to their specific application,
-forming role.
+forming a role.
 
 Formation of roles is intended to define clear and understandable for users
 access control rules. Role-based access control allows for flexible,
@@ -70,7 +70,7 @@ $role->setPermissionsAttribute($permissions);
 
 ## Creating administrator
 
-To create a user with the maximum (at time of writing) rights
+To create a user with the maximum (at a time of writing) rights
 run the following command:
 
 
