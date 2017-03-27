@@ -14,7 +14,7 @@ The main emphasis is on rapid prototyping and different content.
 
 That's all.
 
-###What it is?
+###What is it?
 
 
 Orchid is an extension of the Laravel web programming framework, which can be used to develop almost any web application.
