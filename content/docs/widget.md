@@ -9,7 +9,7 @@ pageTitle: - Widget
 
 Widget - an instance of Widget, or inherited from him.
 This component is used mainly for the purpose of registration.
-Widgets are usually embedded in the representation to form a complex, but at the same time independent of the user interface.
+Widgets are usually embedded in the representation to form a complex but at the same time independent of the user interface.
 
 
 
@@ -26,7 +26,7 @@ php artisan make:widget NAME
 
 The `app/Http/Widgets` folder to create a class of the widget template like a controller, a widget can also have its own view.
 
-Recommended siting widget files in a subdirectory views.
+Recommended sitting widget files in a subdirectory views.
 ```php
 namespace App\Http\Widgets;
 
@@ -64,7 +64,7 @@ To register your new widget, you must bring it to the `config/widget.php`
 ###Using :
 
 
-"Run" method is executed when the call widget defaul.
+"Run" method is executed when the call widget default.
 you must perform in the code to connect the widget using Blade syntax:
 ```php
 @widget('Test')
