@@ -2,6 +2,7 @@
 view::extends: _includes.docs_post_base
 view::yields: post_body
 pageTitle: - Socket
+pageDescription: Laravel library for asynchronously serving WebSockets.
 ---
 @verbatim
 

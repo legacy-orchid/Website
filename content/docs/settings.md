@@ -2,6 +2,7 @@
 view::extends: _includes.docs_post_base
 view::yields: post_body
 pageTitle: - Settings
+pageDescription: Laravel settings - a repository of "key-value" is the simplest data storage
 ---
 @verbatim
 # Settings

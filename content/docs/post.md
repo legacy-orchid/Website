@@ -1,7 +1,8 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Записи
+pageTitle: - Posts
+pageDescription: Orchid Posts systems for Laravel
 ---
 @verbatim
 #Posts
