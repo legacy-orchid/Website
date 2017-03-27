@@ -48,7 +48,7 @@ You can use this function with your links to give them an active state.
 </a>
 ```
 
-You can also provide certain paths or routes to be exluded when being considered.
+You can also provide certain paths or routes to be exuded when being considered.
 
 ```php
 active(['pages/*', 'not:pages/contact'])
