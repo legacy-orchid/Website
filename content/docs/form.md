@@ -18,7 +18,7 @@ Orchid has two forms:
 
 The basic form differs from realizing only by the fact that it is possible to `connect an unlimited number of implementers` by means of calling` events`.
 
-Example of the basic form:
+An example of the basic form:
 ```php
 <?php
 
@@ -68,7 +68,7 @@ class RoleFormGroup extends FormGroup
 
 The form on which the data is `saved/updated`. A notion that the form has its own properties of validation.
 Each implementing form will be run in turn without knowing anything about the previous or subsequent.
-Writing a form should not cause any problems, since it looks like a regular controller.
+Writing a form should not cause any problems since it looks like a regular controller.
 
 Example:
 ```php
