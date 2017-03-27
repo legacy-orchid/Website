@@ -10,9 +10,8 @@
     <h4 class="text-orchid font-thin">The Application</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/post')">Post</a></li>
-        <li><a href="@url('/docs/post')">Taxonomies</a></li>
-        <li><a href="@url('/docs/form')">Form</a></li>
         <li><a href="@url('/docs/type')">Type</a></li>
+        <li><a href="@url('/docs/form')">Form</a></li>
         <li><a href="@url('/docs/field')">Field</a></li>
     </ul>
 

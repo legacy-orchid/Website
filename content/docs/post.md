@@ -4,14 +4,14 @@ view::yields: post_body
 pageTitle: - Записи
 ---
 @verbatim
-#Записи
+#Posts
 ----------
 The platform assumes that by default any elements that contain site data are a `Post` model.
 
 So, now you can fetch database data:
 
 ```php
-    $posts = Post::all();
+$posts = Post::all();
 ```
 
 ```php
@@ -21,7 +21,9 @@ $posts = Post::status('publish')->get();
 
 // A specific post
 $post = Post::find(31);
-echo $post->getContent('name'); //The name of the record taking into account the current localization
+
+//The name of the record taking into account the current localization
+echo $post->getContent('name');
 
 ```
 
