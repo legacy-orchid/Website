@@ -13,27 +13,41 @@ Orchid based off [Laravel Framework](http://laravel.com), so before you put the 
 
 #### Via Composer
 
-Add the project according
+Going your project directory on shell and run this command: 
 ```php
-"require": {
-    "orchid/platform": "dev-master"
-}
+$ composer require orchid/platform
 ```
 
 ####  Provider and Facades
 
+Add to `config/app.php`:
 
-Add the following elements in the configuration file `config/app`
+- Service provider to the 'providers' array:
 ```php
-Orchid\Providers\FoundationServiceProvider::class,
+'providers' => [
+  // Laravel Framework Service Providers...
+  //...
+
+  // Package Service Providers
+  Orchid\Providers\FoundationServiceProvider::class,
+
+  // ...
+
+  // Application Service Providers
+  // ...
+];
 ```
 
+- Facades aliases to the 'aliases' array:
 ```php
-'Alert' =>  Orchid\Facades\Alert::class,
-'Dashboard' =>  Orchid\Facades\Dashboard::class,
-'Setting' =>  Orchid\Facades\Setting::class,
-'Active' => Watson\Active\Facades\Active::class,
-'Image' => Intervention\Image\Facades\Image::class,
+'aliases' => [
+  // ...
+  'Dashboard' =>  Orchid\Facades\Dashboard::class,
+  'Alert' =>  Orchid\Alert\Facades\Alert::class,
+  'Setting' =>  Orchid\Settings\Facades\Setting::class,
+  'Active' => Watson\Active\Facades\Active::class,
+  'Image' => Intervention\Image\Facades\Image::class,
+];
 ```
 
 
@@ -57,8 +71,6 @@ class User extends UserOrchid
 
 
 > **Go to :**  http://your-application/dashboard
-
-
 
 
 

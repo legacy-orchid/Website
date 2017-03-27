@@ -6,40 +6,74 @@ pageTitle: - Записи
 @verbatim
 #Записи
 ----------
-Платформа предпологает, что по умолчанию любые элементы которые содержат в себе данные сайта храниться в таблице `"posts"`.
+The platform assumes that by default any elements that contain site data are a `Post` model.
 
-Основные поля таблицы составляют :
+So, now you can fetch database data:
 
-1. user_id - пользователь которому принадлежит данная запись
-1. type - определение записи
-1. status - статус записи
-1. section_id - принадлежность к секции
-1. content - поле типа json должен содержать в себе только необходимый материал без вспомогательных элементов 
-1. options - поле типа json, где наоборот содержаться впомогательные элементы (Например: разрешить или запретить комментирование записи)
-1. slug - уникальное значение определяющее ЧПУ
-1. publish_at - время публикации
-
-
-Определение поведения той или иной записи происходит в зависимости от указанного `типа`.
 ```php
-//Получить все эеземпляры коллекции $video
+    $posts = Post::all();
+```
+
+```php
+// All published posts
+$posts = Post::published()->get();
+$posts = Post::status('publish')->get();
+
+// A specific post
+$post = Post::find(31);
+echo $post->getContent('name'); //The name of the record taking into account the current localization
+
+```
+
+
+### Single Table Inheritance
+
+If you choose to create a new class for your custom post type, you can have this class be returned for all instances of that post type.
+
+The definition of the behavior of a record is based on the specified `type`.
+```php
+//all objects in the $videos Collection will be instances of Post
 $videos = Post::type('video')->status('publish')->get();
 ```
 
 
-###Taxonomies
+### Taxonomies
 
-Вы можете получить таксонометию для конкретной записи:
+You can get taxonomies for a specific post like:
 
 ```php
 $post = Post::find(1);
 $taxonomy = $post->taxonomies()->first();
 echo $taxonomy->taxonomy;
 ```
-Или вы можете искать, используя свои таксонометрии:
+
+Or you can search for posts using its taxonomies:
 
 ```php
 $post = Post::taxonomy('category', 'php')->first();
 ```
+
+### Categories & Taxonomies
+
+Get a category or taxonomy or load posts from a certain category. There are multiple ways
+to achieve it.
+
+
+```php
+// all categories
+$category = Taxonomy::category()->slug('uncategorized')->posts()->first();
+
+
+// only all categories and posts connected with it
+$category = Taxonomy::where('taxonomy', 'category')->with('posts')->get();
+$category->each(function($category) {
+    echo $category->getContent('name');
+});
+
+// clean and simple all posts from a category
+$category = Category::slug('uncategorized')->posts()->first();
+$category->posts->each(function($post) {
+    echo $post->getContent('name');
+});
 
 @endverbatim
