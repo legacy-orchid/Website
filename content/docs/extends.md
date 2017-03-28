@@ -1,7 +1,7 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Some Markdown
+pageTitle: - Меню панели администратора
 ---
 @verbatim
 #Меню панели администратора

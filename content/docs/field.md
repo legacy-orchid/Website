@@ -40,8 +40,21 @@ return [
     'keywords'    => 'tag:tags|name:keywords|max:255|required|title:Ключевые слова|help:Упоменение',
     'robot'       => 'tag:robot|name:robot|max:255|required|title:Индексация|help:Разрешить поисковым роботам индесацию страницы',
     'free' => 'tag:checkbox|name:robot|max:255|required|title:Бесплатно|help:Мероприятие бесплатно|placeholder:Мероприятие бесплатно|default:1',
-
 ];
 ```
+ 
+ 
+ 
+###Place
+ 
+The 'place' field requires the key for Google map to be specified in `config/service`
+
+```php
+//
+'google-maps' => [
+        'key' => 'KEY'
+    ],
+```
+
  
  @endverbatim

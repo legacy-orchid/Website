@@ -6,7 +6,6 @@
         <li><a href="@url('/docs/installation')">Installation</a></li>
     </ul>
 
-
     <h4 class="text-orchid font-thin">The Application</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/post')">Post</a></li>
@@ -15,25 +14,30 @@
         <li><a href="@url('/docs/field')">Field</a></li>
     </ul>
 
-    <h4 class="text-orchid font-thin">Basics</h4>
+    <h4 class="text-orchid font-thin">Service</h4>
     <ul class="toc-links">
-        <li><a href="@url('/docs/access')">Access</a></li>
-        <li><a href="@url('/docs/logs')">Logs</a></li>
-        <li><a href="@url('/docs/widget')">Widget</a></li>
-        <li><a href="@url('/docs/settings')">Settings</a></li>
-        {{--<li><a href="@url('/docs/extends')">Extends</a></li>--}}
-        <li><a href="@url('/docs/alert')">Alert</a></li>
         <li><a href="@url('/docs/active')">Active</a></li>
+        <li><a href="@url('/docs/alert')">Alert</a></li>
+        <li><s href="@url('/docs/backups')">Backups</s></li>
+        <li><a href="@url('/docs/defender')">Defender</a></li>
+        <li><a href="@url('/docs/logs')">Logs</a></li>
+        <li><a href="@url('/docs/monitor')">Monitor</a></li>
+        <li><a href="@url('/docs/schema')">Schema</a></li>
         <li><a href="@url('/docs/tags')">Tags</a></li>
+        <li><a href="@url('/docs/widget')">Widget</a></li>
     </ul>
 
-
+    <h4 class="text-orchid font-thin">Core</h4>
+    <ul class="toc-links">
+        <li><a href="@url('/docs/access')">Access</a></li>
+        <li><s href="@url('/docs/extends')">Extends</s></li>
+        <li><a href="@url('/docs/settings')">Settings</a></li>
+    </ul>
 
     <h4 class="text-orchid font-thin">Packages</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/socket')">Socket</a></li>
     </ul>
-
 
     <h4 class="text-orchid font-thin">Contributing</h4>
     <ul class="toc-links">
