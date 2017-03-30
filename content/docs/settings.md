@@ -22,6 +22,8 @@ The storage array will be converted to JSON, and in the preparation of its value
 To add a new value to the repository you want to use
 ```php
 Settings::set($key,$value);
+//or
+settings_set($key,$value);
 ```
 
 For values:
@@ -31,15 +33,19 @@ For values:
 * @param string|null  $default
 */
 Settings::get($key, $default);
+//or
+settings($key,$default);
 ```
 
 To delete the value:
 ```php
 /**
-* @param string|array $key
+* @param string|array $key      
 * @param string|null  $default
 */
 Settings::forget($key);
+//or
+settings_forget($key,$default);
 ```
 
 

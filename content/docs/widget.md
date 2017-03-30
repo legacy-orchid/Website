@@ -22,7 +22,7 @@ Widgets allow you to reuse the user interface code.
 	
 To create a new widget, you need to	
 ```php
-php artisan make:widget NAME
+php artisan make:widget MySuperWidget
 ```
 
 The `app/Http/Widgets` folder to create a class of the widget template like a controller, a widget can also have its own view.
@@ -33,7 +33,7 @@ namespace App\Http\Widgets;
 
 use Orchid\Dashboard\Services\Widget\Widget;
 
-class NAME extends Widget {
+class MySuperWidget extends Widget {
 
     /**
      * Class constructor.
@@ -56,7 +56,7 @@ class NAME extends Widget {
 To register your new widget, you must bring it to the `config/widget.php`
 ```php
 'widgets' => [
-    'Test' => App\Widgets\NAME::class
+    'NameForMySuperWidget' => App\Widgets\MySuperWidget::class
  ],
 ```
 	
@@ -68,7 +68,7 @@ To register your new widget, you must bring it to the `config/widget.php`
 "Run" method is executed when the call widget default.
 you must perform in the code to connect the widget using Blade syntax:
 ```php
-@widget('Test')
+@widget('NameForMySuperWidget')
 ```
 
 @endverbatim

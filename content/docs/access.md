@@ -20,7 +20,7 @@ Default Access Middleware Testing is carried out on the stage,
 so if you want to scan, add it (By default, it is already reserved, and you can use it without disease)
 
 ```php
-'dashboard' => \Orchid\Access\Middleware\AccessMiddleware::class,
+'access' => \Orchid\Http\Middleware\AccessMiddleware::class,
 ```
 
 ## User
@@ -111,20 +111,8 @@ class PermissionServiceProvider extends ServiceProvider
         return [
             'Modules' => [
                 [
-                    'slug'        => 'unique name',
-                    'description' => 'text',
-                ],
-                [
-                    'slug'        => 'unique name',
-                    'description' => 'text',
-                ],
-                [
-                    'slug'        => 'unique name',
-                    'description' => 'text',
-                ],
-                [
-                    'slug'        => 'unique name',
-                    'description' => 'text',
+                    'slug'        => 'Analytics',
+                    'description' => 'Tools to measure data to gain customer insights.',
                 ],
             ],
 
