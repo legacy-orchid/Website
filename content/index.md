@@ -1,7 +1,8 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Documentation
+pageTitle: Documentation
+pageDescription: - Laravel Admin Panel
 ---
 @verbatim
 

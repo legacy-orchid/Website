@@ -1,7 +1,7 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Tag
+pageTitle: Tag
 pageDescription: Laravel tagging systems
 ---
 @verbatim

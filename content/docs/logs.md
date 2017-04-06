@@ -1,7 +1,7 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Error log
+pageTitle: Error log
 ---
 @verbatim
 #Error log

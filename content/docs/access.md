@@ -1,7 +1,7 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Differentiation of access rights
+pageTitle: Differentiation of access rights
 ---
 @verbatim
 # Differentiation of access rights

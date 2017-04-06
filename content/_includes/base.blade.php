@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="description" content="@yield('pageDescription', $siteDescription)">
     <link rel="stylesheet" href="@url('assets/css/app.css')">
-    <title>{{$siteName}} @yield('pageTitle')</title>
-    <meta name="keywords" content="laravel, laravel cms, laravel platform, laravel cmf, laravel crm, php laravel cms, laravel orchid">
+    <title>@yield('pageTitle') - {{$siteName}} </title>
+    <meta name="description" content="@yield('pageDescription', $pageDescription)">
+    <meta name="keywords" content="laravel, laravel cms, laravel platform, laravel cmf, laravel admin panel, php laravel cms, laravel orchid">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
           rel='stylesheet' type='text/css'>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

@@ -62,7 +62,7 @@ return [
      *
      */
 
-    'siteName' => 'Orchid - Laravel platform',
+    'siteName' => 'Laravel platform, laravel admin panel',
 
-    'siteDescription' => 'Мощная и гибкая платформа на базе Laravel',
+    'siteDescription' => 'laravel admin panel',
 ];

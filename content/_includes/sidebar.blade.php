@@ -18,7 +18,7 @@
     <ul class="toc-links">
         <li><a href="@url('/docs/active')">Active</a></li>
         <li><a href="@url('/docs/alert')">Alert</a></li>
-        <li><s href="@url('/docs/backups')">Backups</s></li>
+        <li><a href="@url('/docs/backups')">Backups</a></li>
         <li><a href="@url('/docs/defender')">Defender</a></li>
         <li><a href="@url('/docs/logs')">Logs</a></li>
         <li><a href="@url('/docs/monitor')">Monitor</a></li>
