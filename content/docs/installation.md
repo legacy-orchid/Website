@@ -10,6 +10,7 @@ pageTitle: Installation
 
 Orchid based off [Laravel Framework](http://laravel.com), so before you put the Orchid, you must install [Laravel](http://laravel.com).
 
+You can see the installation on [YouTube](https://youtu.be/e9B5eVw7yss)
 
 #### Via Composer
 
@@ -70,8 +71,12 @@ class User extends UserOrchid
 #### Finish
 
 
-> **Go to :**  http://your-application/dashboard
+> **Go to :**  http://localhost/dashboard
 
+The graphical installation does not work if the server is started using the `artisan serve` command, if you want to use a local server, please go to the public directory and run
+```php
+php -S localhost:8000
+```
 
 
 ##### Creating administrator
