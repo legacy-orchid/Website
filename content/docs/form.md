@@ -43,8 +43,8 @@ class RoleFormGroup extends FormGroup
     public function attributes()
     {
         return [
-            'name'        => 'Роли',
-            'description' => 'Разделение прав доступа',
+            'name'        => 'Name',
+            'description' => 'description',
         ];
     }
 
@@ -53,12 +53,8 @@ class RoleFormGroup extends FormGroup
      */
     public function main()
     {
-        $role = new Role();
-        $roles = $role->select('name', 'slug', 'created_at')->paginate();
-
-        return view('dashboard::container.systems.roles.grid', [
-            'roles' => $roles,
-        ]);
+        //Display main form or grid
+        return view('');
     }
 }
 
@@ -103,8 +99,8 @@ class BaseRolesForm extends Form
     public function rules()
     {
         return [
-            'name'        => 'required|max:255|unique:roles,name,'.$this->request->get('name').',name',
-            'slug'        => 'required|max:255|unique:roles,slug,'.$this->request->get('slug').',slug',
+            'name'        => 'required|max:255',
+            'slug'        => 'required|max:255',
             'permissions' => 'array',
         ];
     }
@@ -118,24 +114,8 @@ class BaseRolesForm extends Form
      */
     public function get(Role $role = null)
     {
-        if (!is_null($role)) {
-            $rolePermission = $role->permissions;
-            $permission = Dashboard::getPermission();
-            $permission->transform(function ($array) use ($rolePermission) {
-                foreach ($array as $key => $value) {
-                    $array[$key]['active'] = array_key_exists($value['slug'], $rolePermission);
-                }
-
-                return $array;
-            });
-        } else {
-            $permission = Dashboard::getPermission();
-        }
-
-        return view('dashboard::container.systems.roles.info', [
-            'permission' => $permission,
-            'role'       => $role,
-        ]);
+        //Display form
+        return view('');
     }
 
     /**
@@ -145,12 +125,7 @@ class BaseRolesForm extends Form
      */
     public function persist()
     {
-        $role = Role::firstOrNew([
-            'slug' => $this->request->get('slug'),
-        ]);
-        $role->fill($this->request->all());
-        $role->permissions = $this->request->get('permissions') ?: [];
-
+        //save action
         $role->save();
         Alert::success('Message');
     }
@@ -160,6 +135,7 @@ class BaseRolesForm extends Form
      */
     public function delete(Role $role)
     {
+
         $role->delete();
         Alert::success('Message');
     }
@@ -240,6 +216,8 @@ class RoleController extends Controller
 
     /**
      * @param Role $role
+     *
+     * @return mixed
      */
     public function edit(Role $role)
     {
