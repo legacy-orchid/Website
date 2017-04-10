@@ -127,4 +127,33 @@ class DemoType extends Type
 
 You can extend the data type with all the available methods to add a new functionality to it that corresponds to your application
  
+
+ 
+#### Modification Grid
+ 
+The data that you want to display in the grid can be modified by passing an array with a name and function instead of the key value, where the passed parameter is the original data slice.
+
+ ```
+ /**
+  * Grid View for post type.
+  */
+ public function grid()
+ {
+     return [
+         'name'       => 'Name',
+         'publish_at' => 'Date of publication',
+         'created_at' => 'Date of creation',
+         'full_name'  =>  => [
+                             'name' => 'Full name',
+                             'action' => function($post){
+                                 return  $post->getContent('fist_name') .' '. $post->getContent('last_name');
+                             }
+                        ],
+     ];
+ }
+
+```
+ 
+
+ 
 @endverbatim
