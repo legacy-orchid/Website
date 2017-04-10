@@ -146,7 +146,9 @@ The data that you want to display in the grid can be modified by passing an arra
          'full_name'  =>  => [
              'name' => 'Full name',
              'action' => function($post){
-                 return  $post->getContent('fist_name') .' '. $post->getContent('last_name');
+                 return  $post->getContent('fist_name') 
+                  .' '.
+                  $post->getContent('last_name');
              }
          ],
      ];
