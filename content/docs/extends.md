@@ -1,97 +1,62 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Меню панели администратора
+pageTitle: - Admin panel menu
 ---
 @verbatim
-#Меню панели администратора
+# Admin panel menu
 ----------
 
-Меню панели (menu) —  элемент интерфейса администратора, 
-позволяющий выбрать одну из нескольких перечисленных опций программного обеспечения. 
-Является важнейшим элементом графического интерфейса администратора.
+The panel menu is an element of the admin interface,
+Allows you to select one of several listed software options.
+It is an important element of the graphical user interface.
 
-Меню в Orchid делиться на несколько областей, которые в свою очередь могут являться
-контейнерами для другого меню.
-
-На текущий момент существуют два вида меню
-
- - Левое стандартное меню
- - Левое модульное меню
- - Верхнее меню
+The menu in Orchid is divided into several areas, which in turn can be
+Containers for another menu.
 
 
-###Использование :
+
+### Using:
 	
 	
-Для регистрации нового меню для вашего пакета или модуля необходимо 
-указать его в сервис провайдере.
+To register a new menu for your package or module, you need to
+Specify it in the composer provider.
 	
 ```php
 <?php
 
-namespace Orchid\Dashboard\Providers;
+namespace App\Http\Composers;
 
-use Illuminate\Support\ServiceProvider;
-use Orchid\Dashboard\Services\Menu\DashboardMenu;
+use Orchid\Kernel\Dashboard;
 
-class MenuServiceProvider extends ServiceProvider
+class MenuComposer
 {
     /**
-     * Indicates if loading of the provider is deferred.
+     * MenuComposer constructor.
      *
-     * @var bool
+     * @param Dashboard $dashboard
      */
-    protected $defer = false;
-
-    /**
-     * Boot the application events.
-     */
-    public function boot(DashboardMenu $dashboardMenu)
+    public function __construct(Dashboard $dashboard)
     {
-        $this->registerMenu($dashboardMenu);
+        $this->dashboard = $dashboard;
     }
 
-    protected function registerMenu(DashboardMenu $dashboardMenu = null)
+    public function compose()
     {
-        $usersMenu = [
-            'slug' => 'Users',
-            'icon' => 'fa fa-users',
-            'url' => route('dashboard.users.index'),
-            'label' => trans('dashboard::menu.Users'),
-            'groupname' => trans('dashboard::menu.Users'),
-            'childs' => false,
-            'divider' => false,
-        ];
-        $dashboardMenu->add('Systems', 'dashboard::partials.leftMenu', $usersMenu, 501);
-    }
-
-    /**
-     * Register the service provider.
-     */
-    public function register()
-    {
-        //
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [];
+        $this->dashboard->menu->add('Main', [
+            'slug'       => 'slug-my-menu',
+            'icon'       => 'icon',
+            'route'      => '#',
+            'label'      => 'My name Menu',
+            'childs'     => true,
+            'main'       => true,
+            'active'     => 'dashboard.mymenu.*',
+            'permission' => 'dashboard.mymenu',
+            'sort'       => 1,
+        ]);
     }
 }
-
 ```
 
-Метод add(), принимает :
-
- - Название меню
- - Шаблон
- - Массив значений
- - Порядок
  
  @endverbatim

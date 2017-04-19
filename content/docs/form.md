@@ -112,22 +112,19 @@ class BaseRolesForm extends Form
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function get(Role $role = null)
+    public function get()
     {
         //Display form
-        return view('');
     }
 
     /**
-     * Save Base Role.
+     * Save Base Post.
      *
      * @return \Illuminate\Http\JsonResponse
      */
     public function persist()
     {
         //save action
-        $role->save();
-        Alert::success('Message');
     }
 
     /**
@@ -135,9 +132,7 @@ class BaseRolesForm extends Form
      */
     public function delete(Role $role)
     {
-
-        $role->delete();
-        Alert::success('Message');
+        //remove action
     }
 }
 

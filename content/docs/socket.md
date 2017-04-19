@@ -18,21 +18,19 @@ Protocol WebSocket - an independent protocol based on the TCP protocol. It enabl
 
 ## Installation
 
-1. install package
+install package
 
 ```php
-composer require orchid/socket
+$ composer require orchid/socket
 ```
 
-2. edit config/app.php
-
-service provider :
+edit config/app.php service provider :
 
 ```php
 Orchid\Socket\Providers\SocketServiceProvider::class
 ```
 
-3. structure
+structure
 
 ```php
 php artisan vendor:publish

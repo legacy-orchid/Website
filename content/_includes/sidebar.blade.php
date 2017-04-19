@@ -30,7 +30,7 @@
     <h4 class="text-orchid font-thin">Core</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/access')">Access</a></li>
-        <li><s href="@url('/docs/extends')">Extends</s></li>
+        <li><a href="@url('/docs/extends')">Extends</a></li>
         <li><a href="@url('/docs/settings')">Settings</a></li>
     </ul>
 

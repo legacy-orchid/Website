@@ -133,7 +133,7 @@ class DemoType extends Type
                     |name:robot
                     |max:255
                     |required
-                    |title:Индексация
+                    |title:Robot index
                     |help:Allow search bots to index page',
 
             'free' => 'tag:checkbox

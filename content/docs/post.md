@@ -21,7 +21,7 @@ $posts = Post::published()->get();
 $posts = Post::status('publish')->get();
 
 // A specific post
-$post = Post::find(31);
+$post = Post::find(42);
 
 //The name of the record taking into account the current localization
 echo $post->getContent('name');
@@ -45,7 +45,7 @@ $videos = Post::type('video')->status('publish')->get();
 You can get taxonomies for a specific post like:
 
 ```php
-$post = Post::find(1);
+$post = Post::find(42);
 $taxonomy = $post->taxonomies()->first();
 echo $taxonomy->taxonomy;
 ```
@@ -78,5 +78,29 @@ $category = Category::slug('uncategorized')->posts()->first();
 $category->posts->each(function($post) {
     echo $post->getContent('name');
 });
+```
+
+### Attachment
+
+Attachments are files that are related to a record.
+These files can be of different formats and resolutions.
+Each format can be called separately, for example, take only images or only documents at the record.
+
+
+```php
+$item = Post::find(42);
+$item->attachment('image')->get();
+```
+
+The uploaded images are automatically assigned to the permissions specified in the `config/content`.
+To call them, you can use the previously specified key.
+If images for this key are not found, the original file will be returned.
+
+```php
+$image = $item->attachment('image')->fisrt();
+
+//Returns the public address of the image with the resolution set
+$image->url('standart');
+```
 
 @endverbatim
