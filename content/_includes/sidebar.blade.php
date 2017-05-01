@@ -23,7 +23,7 @@
     <ul class="toc-links">
         <li><a href="@url('/docs/form')">Form</a></li>
         <li><a href="@url('/docs/field')">Field</a></li>
-        <li><a href="@url('/docs/extends')">Extends</a></li>
+        <li><a href="@url('/docs/menu')">Menu</a></li>
         <li><a href="@url('/docs/settings')">Settings</a></li>
     </ul>
 

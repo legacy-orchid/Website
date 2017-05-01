@@ -1,10 +1,10 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Admin panel menu
+pageTitle: - Laravel Admin panel menu
 ---
 @verbatim
-# Admin panel menu
+# Admin Menu
 ----------
 
 The panel menu is an element of the admin interface,
@@ -17,8 +17,7 @@ Containers for another menu.
 
 
 ### Using:
-	
-	
+
 To register a new menu for your package or module, you need to
 Specify it in the composer provider.
 	

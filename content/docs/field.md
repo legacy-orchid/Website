@@ -112,8 +112,8 @@ The 'place' field requires the key for Google map to be specified in `config/ser
 ```php
 //
 'google-maps' => [
-        'key' => 'KEY'
-    ],
+        'key' => 'secret string'
+],
 ```
 
  
