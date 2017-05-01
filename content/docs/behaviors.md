@@ -1,24 +1,30 @@
 ---
 view::extends: _includes.docs_post_base
 view::yields: post_body
-pageTitle: - Types
-pageDescription: Laravel Types
+pageTitle: - Behaviors
+pageDescription: Laravel Behaviors
 ---
 @verbatim
-#Types 
+#Behaviors 
 ----------
 
-Types are the main part of Orchid, instead of generating a CRUD for each model
+Behaviors are the main part of Orchid, instead of generating a CRUD for each model
 You can select any entity in a separate type and easily operate it
 
 
-Own types must be registered in `config/content.php` in the types section
+Own behaviors must be registered in `config/content.php` in the types section
 
 
 ```php
 //
+'pages' => [
+    //App\Core\Behaviors\Single\DemoPage::class,
+],
+
+
+//
 'types' => [
-    //App\Types\DemoType::class,
+    //App\Core\Behaviors\Many\DemoPost::class,
 ],
 ```
 
@@ -26,55 +32,41 @@ Own types must be registered in `config/content.php` in the types section
 The type looks like this:
 
 ```php
-<?php
+<?php namespace DummyNamespace;
 
-namespace App\Types;
+use Orchid\Behaviors\Many;
 
-use Orchid\Http\Forms\Posts\BasePostForm;
-use Orchid\Http\Forms\Posts\UploadPostForm;
-use Orchid\Type\Type;
-
-class DemoType extends Type
+class DummyClass extends Many
 {
-    /**
-     * @var string
-     */
-    public $name = 'Demo type';
 
     /**
      * @var string
      */
-    public $description = 'Demonstrative type';
+    public $name = '';
 
     /**
      * @var string
      */
-    public $slug = 'demo';
+    public $slug = '';
+
+    /**
+     * @var string
+     */
+    public $icon = '';
 
     /**
      * Slug url /news/{name}.
-     *
      * @var string
      */
-    public $slugFields = 'name';
-
-    /**
-     * @var bool
-     */
-    public $api = true;
+    public $slugFields = '';
 
     /**
      * Rules Validation.
-     *
      * @return array
      */
-    public function rules(): array
+    public function rules()
     {
-        return [
-            'id'             => 'sometimes|integer|unique:posts',
-            'content.*.name' => 'required|string',
-            'content.*.body' => 'required|string',
-        ];
+        return [];
     }
 
     /**
@@ -82,80 +74,7 @@ class DemoType extends Type
      */
     public function fields()
     {
-        return [
-            'name' => 'tag:input
-                    |type:text
-                    |name:name
-                    |max:255
-                    |required
-                    |title:Name Articles
-                    |help:Article title',
-            'body' => 'tag:textarea
-                    |name:body
-                    |max:255
-                    |required
-                    |class:summernote
-                    |rows:10',
-            'place'    => 'tag:place
-                    |type:text
-                    |name:place
-                    |max:255
-                    |required
-                    |title:Location
-                    |help:Address on the map
-                    |placeholder:Location',
-            'datetime' => 'tag:datetime
-                    |type:text
-                    |name:open
-                    |required
-                    |title:Opening date
-                    |help:The opening event will take place',
-            'title'       => 'tag:input
-                    |type:text
-                    |name:title
-                    |max:255
-                    |required
-                    |title:Article Title
-                    |help:SEO title',
-            'description' => 'tag:textarea
-                    |name:description
-                    |max:255
-                    |required
-                    |rows:5
-                    |title:Short description',
-            'keywords'    => 'tag:tags
-                    |name:keywords
-                    |max:255
-                    |required
-                    |title:Keywords
-                    |help:SEO keywords',
-            'robot'       => 'tag:robot
-                    |name:robot
-                    |max:255
-                    |required
-                    |title:Robot index
-                    |help:Allow search bots to index page',
-
-            'free' => 'tag:checkbox
-                    |name:robot
-                    |max:255
-                    |required
-                    |title:Free
-                    |help:Event for free
-                    |placeholder:Event for free|default:1',
-
-        ];
-    }
-
-    /**
-     * @return array
-     */
-    public function modules()
-    {
-        return [
-            UploadPostForm::class,
-            BasePostForm::class,
-        ];
+        return [];
     }
 
     /**
@@ -163,11 +82,15 @@ class DemoType extends Type
      */
     public function grid()
     {
-        return [
-            'name'       => 'Name',
-            'publish_at' => 'Date of publication',
-            'created_at' => 'Date of creation',
-        ];
+        return [];
+    }
+
+    /**
+     * @return array
+     */
+    public function modules()
+    {
+        return [];
     }
 }
 

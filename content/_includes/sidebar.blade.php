@@ -4,25 +4,20 @@
         <li><a href="@url('/')">Home</a></li>
         <li><a href="@url('/docs/screenshot')">Screenshot</a></li>
         <li><a href="@url('/docs/installation')">Installation</a></li>
+        <li><a href="@url('/docs/contributors')">Guidelines</a></li>
+        <li><a href="@url('/docs/license')">License</a></li>
     </ul>
 
 
     <h4 class="text-orchid font-thin">Content</h4>
     <ul class="toc-links">
-        <li><a href="#">Page</a></li>
         <li><a href="@url('/docs/post')">Post</a></li>
         <li><a href="@url('/docs/behaviors')">Behaviors</a></li>
         <li><a href="@url('/docs/tags')">Tags</a></li>
-        <li><a href="#">Attachment</a></li>
-        <li><a href="#">Comment</a></li>
+        <li><s href="#">Attachment</s></li>
+        <li><s href="#">Comment</s></li>
     </ul>
 
-
-    <h4 class="text-orchid font-thin">Permissions</h4>
-    <ul class="toc-links">
-        <li><a href="#">Roles</a></li>
-        <li><a href="@url('/docs/access')">Permissions</a></li>
-    </ul>
 
     <h4 class="text-orchid font-thin">Control Panel</h4>
     <ul class="toc-links">
@@ -30,6 +25,12 @@
         <li><a href="@url('/docs/field')">Field</a></li>
         <li><a href="@url('/docs/extends')">Extends</a></li>
         <li><a href="@url('/docs/settings')">Settings</a></li>
+    </ul>
+
+    <h4 class="text-orchid font-thin">Permissions</h4>
+    <ul class="toc-links">
+        <li><s href="#">Roles</s></li>
+        <li><a href="@url('/docs/access')">Permissions</a></li>
     </ul>
 
 
@@ -46,25 +47,23 @@
         <li><a href="@url('/docs/defender')">Defender</a></li>
         <li><a href="@url('/docs/logs')">Logs</a></li>
         <li><a href="@url('/docs/schema')">Schema</a></li>
+        <li><a href="@url('/docs/monitor')">Monitor</a></li>
     </ul>
 
+
+    {{--
     <h4 class="text-orchid font-thin">User Interface</h4>
     <ul class="toc-links">
         <li><a href="#">Typography</a></li>
         <li><a href="#">Forms</a></li>
         <li><a href="#">Buttons</a></li>
     </ul>
+    --}}
 
 
     <h4 class="text-orchid font-thin">Packages</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/socket')">Socket</a></li>
-        <li><a href="@url('/docs/monitor')">Monitor</a></li>
     </ul>
 
-    <h4 class="text-orchid font-thin">Contributing</h4>
-    <ul class="toc-links">
-        <li><a href="@url('/docs/contributors')">Guidelines</a></li>
-        <li><a href="@url('/docs/license')">License</a></li>
-    </ul>
 </nav>
