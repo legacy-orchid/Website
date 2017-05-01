@@ -14,16 +14,18 @@ Each field can be used in a type and if you need to create your own do not hesit
 The field consists of one class with the obligatory `create` method, which must raise the 'view' to display to the user
  
 ```php
-//
+// Available fields to form templates
 'fields' => [
-    'textarea' => \Orchid\Field\Fields\TextAreaField::class,
-    'input'    => \Orchid\Field\Fields\InputField::class,
-    'tags'     => \Orchid\Field\Fields\TagsField::class,
-    'robot'    => \Orchid\Field\Fields\RobotField::class,
-    'place'    => \Orchid\Field\Fields\PlaceField::class,
-    'datetime' => \Orchid\Field\Fields\DateTimerField::class,
-    'checkbox' => \Orchid\Field\Fields\CheckBoxField::class,
-    'path'     => \Orchid\Field\Fields\PathField::class,
+    'textarea' => Orchid\Fields\TextAreaField::class,
+    'input'    => Orchid\Fields\InputField::class,
+    'tags'     => Orchid\Fields\TagsField::class,
+    'robot'    => Orchid\Fields\RobotField::class,
+    'place'    => Orchid\Fields\PlaceField::class,
+    'datetime' => Orchid\Fields\DateTimerField::class,
+    'checkbox' => Orchid\Fields\CheckBoxField::class,
+    'path'     => Orchid\Fields\PathField::class,
+    'code'     => Orchid\Fields\CodeField::class,
+    'wysiwyg'  => \Orchid\Fields\SummernoteField::class,
 ],
 ```
 
