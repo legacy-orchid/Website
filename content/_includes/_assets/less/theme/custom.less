@@ -1,13 +1,6 @@
 
-.navbar-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
 .container{
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 
@@ -23,7 +16,8 @@ main{
   overflow: hidden;
   text-align: justify;
   img{
-    .img-responsive;
+    max-width: 100%;
+    height: auto;
   }
 
 
@@ -47,107 +41,45 @@ main{
   }
 
   blockquote{
-    border-color: @brand-orchid;
     font-size: inherit;
     line-height: 2em;
-    .box-shadow-lg;
-    .b;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     margin: 1.66em 0;
   }
 
 }
 
-
-
-
-
-
-
-.panel-hover {
-  position: relative;
-  word-wrap: break-word;
-  min-height: 100px;
-  &:hover {
-    color: @brand-light;
-    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
-    border-radius: 0 0 70% 0;
-    background-color: @brand-dark;
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.05);
-
-    .panel-hover-body {
-      color: @brand-light;
-    }
-    a {
-      color: @brand-white !important;
-    }
-
-    .panel-hover-title {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    }
-    .panel-hover-icon {
-      color: @brand-dark;
-    }
-
-  }
-  &:not(hover) {
-    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
-  }
-
-  .panel-hover-icon {
-    position: absolute;
-    float: right;
-    right: 0;
-    padding: 0.5vw 1vw;
-    bottom: 0;
-    font-size: 1.8em;
-    color: @text-muted;
-  }
-
-  .panel-hover-body {
-    display: block;
-    padding-top: 0.8vw;
-    padding-bottom: 0.8vw;
-    color: @text-muted;
-    font-size: 0.8em;
-  }
-  .panel-hover-title {
-    font-size: 1em;
-    line-height: 1.1;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 300ms;
-  }
-
+.text-orchid{
+  color: @brand-orchid;
 }
 
-
-
-
-/*
- * Разрез
-*/
-
-.pageOption {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  min-height: 30em;
+.container {
+  max-width: 100%;
 }
 
-.option, .option img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
-.option {
-  overflow: hidden;
+.desc {
+  width: 220px;
+  margin-left: 25%;
+}
+.column {
+  float: left;
+}
+.ico {
+  color: #1c7cd6;
+  font-size: 40px;
   position: absolute;
-  transform: skewX(-25deg);
-  transform-origin: 0% 100%;
-}
-
-.option img, .option:after {
-  transform: skewX(25deg);
-  transform-origin: inherit;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }

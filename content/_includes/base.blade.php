@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/TheOrchid/Platform/master/resources/assets/dist/css/orchid.css">
     <link rel="stylesheet" href="@url('assets/css/app.css')">
+
+
     <title>@yield('pageTitle') - {{$siteName}} </title>
     <meta name="description" content="@yield('pageDescription', $pageDescription)">
     <meta name="keywords" content="laravel, laravel cms, laravel platform, laravel cmf, laravel admin panel, php laravel cms, laravel orchid">
@@ -24,52 +27,70 @@
 <body>
 
 
-<header id="header" class="navbar bg-white-only box-shadow-lg">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="@url('/')" class="brand navbar-brand">
-                <img src="@url('assets/img/orchid.svg')" width="150px">
+<header id="header" class="bg-white-only wrapper">
+       <nav class="navbar">
+        <div class="navbar-header v-center">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <i class="icon-menu"></i>
+            </button>
+            <a href="/" class="navbar-brand m-r-lg">
+                <img src="https://theorchid.github.io/assets/img/orchid.svg" style="
+    height: 20px;
+">
             </a>
         </div>
-    </div>
-</header>
 
+
+        <div class="collapse navbar-collapse m-n w-full" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right  font-thin">
+                    {{--
+                    <li><a class="scroll" href="#about">About</a></li>
+                    <li><a class="scroll" href="#features">Features</a></li>
+                    <li><a class="scroll" href="#faq">FAQ</a></li>
+                    <li><a class="scroll" href="#contact">Contact us</a></li>
+                    --}}
+
+
+                    <li><a href="https://github.com/TheOrchid/Platform" target="_blank">GitHub</a></li>
+                    <li><a href="@url('/docs/screenshot')">Gallery</a></li>
+                    <li><a href="@url('/docs/')">Documentation</a></li>
+            </ul>
+        </div>
+       </nav>
+</header>
 
 @yield('body')
 
 
-<footer id="footer">
-    <div class="bg-white b-t">
-        <div class="container padder-v">
 
+<footer class="footer text-center b-t bg-white">
+    <!--Container-->
+    <div class="container ">
+        <!--Row-->
+        <div class="row m-t-xxl m-b-xxl">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center ">
+                <p><a class="logo scroll" href="#hero">
+                        <img src="https://theorchid.github.io/assets/img/orchid.svg" style="
+    height: 20px;
+    margin-bottom: 15px;
+">
+                    </a>
+                </p>
+                <small>The application code is published under the MIT license</small>
 
-            <div class="row v-center">
-
-                <div class="col-md-6">
-                    <div class="">
-                        <a href="https://github.com/TheOrchid/Platform" target="_blank">
-                            <span class="text-md block"><i class="icon-social-github"></i> GitHub</span>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6">
-                    <div class="pull-right text-right">
-                        <span class="text-md block">The Orchid</span>
-                        <small>The application code is published under the MIT license</small>
-                    </div>
-                </div>
             </div>
-
-
         </div>
+        <!--End row-->
     </div>
+    <!--End container-->
 </footer>
 
 
 
+
+
 <script src="@url('/assets/js/app.js')"></script>
+<script src="https://cdn.rawgit.com/TheOrchid/Platform/0b4993c7/resources/assets/dist/js/orchid.js"></script>
 
 <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter42925369 = new Ya.Metrika({ id:42925369, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/42925369" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 

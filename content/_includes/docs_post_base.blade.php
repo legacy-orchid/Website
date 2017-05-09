@@ -4,11 +4,11 @@
 
 @section('body')
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-white">
 
-        <div class="row  bg-white">
+        <div class="row m-t-xxl m-b-xxl">
             <div class="container m-t-xl m-b-xl">
-                <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
 
                     <div class="col-md-3">
                         @include('_includes.sidebar')
