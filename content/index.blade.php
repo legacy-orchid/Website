@@ -1,7 +1,9 @@
 @extends('_includes.base')
 
-@section('body')
+@section('pageTitle','Orchid - Laravel admin panel')
+@section('pageDescription','Laravel Platform application provides a very flexible and extensible way of building your custom application')
 
+@section('body')
 
 
 
