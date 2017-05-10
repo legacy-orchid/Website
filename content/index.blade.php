@@ -267,7 +267,7 @@ height: 600px;
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                     <h2 class="title font-thin text-black">Contact us</h2>
                     <p class="lead large not-mb">For more info or inquiry about Orchid, please feel free
-                        to get in touch with us at <a class="blue-link" href="mailto:support@mutationmedia.net">bliz48rus@gmail.com</a>
+                        to get in touch with us at <a class="blue-link" href="mailto:bliz48rus@gmail.com">bliz48rus@gmail.com</a>
                     </p>
                 </div>
             </div>
