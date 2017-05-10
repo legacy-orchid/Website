@@ -172,7 +172,7 @@ height: 600px;
                         </li>
                         <li>
                             <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
-                            <p class="clear m-b-lg text-justify"><strong>Permission</strong>, the development of selective access control policy. Does not conflict or replace the built-in features of Gate</p>
+                            <p class="clear m-b-lg text-justify"><strong>Permission</strong>, the development of selective access control policy. Does not conflict or replace the built-in features of Gate.</p>
                         </li>
                         <li>
                             <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
@@ -247,7 +247,7 @@ height: 600px;
 
                     <div class="block-faq  m-b-lg">
                         <h4 class="m-b-md text-black">How much does it cost?</h4>
-                        <p style="line-height: 25px;">We do not require money from using this package, but we can voluntarily donate funds.</p>
+                        <p style="line-height: 25px;">Orchid is free, but we appreciate donations.</p>
                     </div>
                 </div>
 
@@ -266,7 +266,7 @@ height: 600px;
             <div class="row m-t-xxl m-b-xxl">
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                     <h2 class="title font-thin text-black">Contact us</h2>
-                    <p class="lead large not-mb">For more info or inquiry about, please feel free
+                    <p class="lead large not-mb">For more info or inquiry about Orchid, please feel free
                         to get in touch with us at <a class="blue-link" href="mailto:support@mutationmedia.net">bliz48rus@gmail.com</a>
                     </p>
                 </div>
