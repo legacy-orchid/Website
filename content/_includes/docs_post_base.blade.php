@@ -6,8 +6,8 @@
 
     <div class="container-fluid bg-white">
 
-        <div class="row m-t-xxl m-b-xxl">
-            <div class="container m-t-xl m-b-xl">
+        <div class="row">
+            <div class="container m-t-md m-b-md">
                 <div class="col-sm-10 col-sm-offset-1">
 
                     <div class="col-md-3">

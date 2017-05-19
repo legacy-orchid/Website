@@ -8,16 +8,14 @@
         <li><a href="@url('/docs/license')">License</a></li>
     </ul>
 
-
     <h4 class="text-orchid font-thin">Content</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/post')">Post</a></li>
         <li><a href="@url('/docs/behaviors')">Behaviors</a></li>
         <li><a href="@url('/docs/tags')">Tags</a></li>
-        <li><s href="#">Attachment</s></li>
-        <li><s href="#">Comment</s></li>
+        {{--<li><s href="#">Attachment</s></li>
+        <li><s href="#">Comment</s></li> --}}
     </ul>
-
 
     <h4 class="text-orchid font-thin">Control Panel</h4>
     <ul class="toc-links">
@@ -27,18 +25,12 @@
         <li><a href="@url('/docs/settings')">Settings</a></li>
     </ul>
 
-    <h4 class="text-orchid font-thin">Permissions</h4>
-    <ul class="toc-links">
-        <li><s href="#">Roles</s></li>
-        <li><a href="@url('/docs/access')">Permissions</a></li>
-    </ul>
-
-
     <h4 class="text-orchid font-thin">Other Things</h4>
     <ul class="toc-links">
         <li><a href="@url('/docs/active')">Active</a></li>
         <li><a href="@url('/docs/alert')">Alert</a></li>
         <li><a href="@url('/docs/widget')">Widget</a></li>
+        <li><a href="@url('/docs/access')">Permissions</a></li>
     </ul>
 
     <h4 class="text-orchid font-thin">Service</h4>
@@ -50,7 +42,6 @@
         <li><a href="@url('/docs/monitor')">Monitor</a></li>
     </ul>
 
-
     {{--
     <h4 class="text-orchid font-thin">User Interface</h4>
     <ul class="toc-links">
@@ -59,7 +50,6 @@
         <li><a href="#">Buttons</a></li>
     </ul>
     --}}
-
 
     <h4 class="text-orchid font-thin">Packages</h4>
     <ul class="toc-links">
