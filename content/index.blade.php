@@ -19,9 +19,9 @@
     line-height: 1em;
     font-weight: 300;
         font-size: 56px;
-">Building very flexible <br> applications on laravel</h1>
+">Creating very flexible <br> Web sites using Orchid</h1>
                         <p class="lead" style="
-    font-size: 18px;">Laravel Platform application provides a very flexible and extensible way of building your custom application.
+    font-size: 18px;">Orchid CMS application provides a very flexible and extensible way of building your website.
                         </p>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="block-media m-t-lg m-b-lg page">
                         <div class="b box-shadow-lg">
-                            <img src="/assets/img/index.png" alt="" class="img-responsive">
+                            <a href="https://www.youtube.com/watch?v=e9B5eVw7yss" target="_blank"><img src="/assets/img/index.png" alt="" class="img-responsive"></a>
                         </div>
                     </div>
                 </div>
@@ -193,29 +193,6 @@ height: 600px;
 
 
 
-    <section id="gallery" class="gallery b-t text-center">
-        <!--Container-->
-        <div class="container m-t-xxl m-b-xxl">
-            <!--Row-->
-            <div class="row m-t-xxl m-b-xxl">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="font-thin m-b-lg">It looks great<br>
-                        <small class="font-thin">We try to make the development faster with fewer shortcomings</small>
-                    </h1>
-                </div>
-                <div class="col-md-8 col-md-offset-2 m-t-md">
-                    <div class="b box-shadow-lg">
-                    <img src="/assets/img/demo.png" class="img-responsive" alt="">
-                    </div>
-                </div>
-            </div>
-            <!--End row-->
-        </div>
-        <!--End container-->
-    </section>
-
-
-
 
     <section id="faq" class="faq b-t" style="
     background: #fafafa;
@@ -233,8 +210,8 @@ height: 600px;
                 </div>
                 <div class="col-md-12  m-t-xxl ">
                     <div class="block-faq m-b-lg">
-                        <h4 class="m-b-md text-black">Orchid is CMS?</h4>
-                        <p style="line-height: 25px;">No, orchid is a package for Laravel which helps with the administration of the application on Laravel, allowing you to write code as you want, control of routing/themes/plugins/etc - none of this and will not be! The package only gives a good set of tools that will be in demand in almost every project.</p>
+                        <h4 class="m-b-md text-black">What is Orchid?</h4>
+                        <p style="line-height: 25px;">Orchid is a package for Laravel which helps with the administration of the application on Laravel, allowing you to write code as you want, control of routing/themes/plugins/etc - none of this and will not be! The package only gives a good set of tools that will be in demand in almost every project.</p>
                     </div>
                     <div class="block-faq  m-b-lg">
                         <h4 class="m-b-md text-black">Is it necessary to use the built-in recordings?</h4>
