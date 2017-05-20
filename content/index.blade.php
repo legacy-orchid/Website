@@ -23,13 +23,19 @@
                         <p class="lead" style="
     font-size: 18px;">Orchid CMS application provides a very flexible and extensible way of building your website.
                         </p>
+
+                        <div class="btn-group btn-group-lg btn-group-justified m-t-lg">
+                            <a href="https://github.com/TheOrchid/Platform" target="_blank" class="btn">
+                                <i class="icon-social-github"></i> Download</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
 
 
-            <div class="row m-t-xxl m-b-xxl">
+            <div class="row m-b-xxl">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="block-media m-t-lg m-b-lg page">
                         <div class="b box-shadow-lg">
