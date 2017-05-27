@@ -42,18 +42,46 @@
 
 
         <div class="collapse navbar-collapse m-n w-full" id="navbar-collapse">
-            <ul class="nav navbar-nav navbar-right  font-thin">
-                    {{--
-                    <li><a class="scroll" href="#about">About</a></li>
-                    <li><a class="scroll" href="#features">Features</a></li>
-                    <li><a class="scroll" href="#faq">FAQ</a></li>
-                    <li><a class="scroll" href="#contact">Contact us</a></li>
-                    --}}
-
-
+            <ul class="nav navbar-nav navbar-right  font-thin hidden-xs">
                     <li><a href="https://github.com/TheOrchid/Platform" target="_blank">GitHub</a></li>
                     <li><a href="@url('/docs/screenshot')">Gallery</a></li>
                     <li><a href="@url('/docs/')">Documentation</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right  font-thin visible-xs">
+                <li><a href="https://github.com/TheOrchid/Platform" target="_blank">GitHub</a></li>
+                <li><a href="@url('/docs/screenshot')">Gallery</a></li>
+                <li><a href="@url('/docs/')">Documentation</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="@url('/docs/screenshot')">Screenshot</a></li>
+                <li><a href="@url('/docs/installation')">Installation</a></li>
+                <li><a href="@url('/docs/contributors')">Guidelines</a></li>
+                <li><a href="@url('/docs/license')">License</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="@url('/docs/post')">Post</a></li>
+                <li><a href="@url('/docs/behaviors')">Behaviors</a></li>
+                <li><a href="@url('/docs/tags')">Tags</a></li>
+                <li><a href="@url('/docs/form')">Form</a></li>
+                <li><a href="@url('/docs/field')">Field</a></li>
+                <li><a href="@url('/docs/menu')">Menu</a></li>
+                <li><a href="@url('/docs/settings')">Settings</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="@url('/docs/active')">Active</a></li>
+                <li><a href="@url('/docs/alert')">Alert</a></li>
+                <li><a href="@url('/docs/widget')">Widget</a></li>
+                <li><a href="@url('/docs/access')">Permissions</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="@url('/docs/backups')">Backups</a></li>
+                <li><a href="@url('/docs/defender')">Defender</a></li>
+                <li><a href="@url('/docs/logs')">Logs</a></li>
+                <li><a href="@url('/docs/schema')">Schema</a></li>
+                <li><a href="@url('/docs/monitor')">Monitor</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="@url('/docs/socket')">Socket</a></li>
+
             </ul>
         </div>
        </nav>

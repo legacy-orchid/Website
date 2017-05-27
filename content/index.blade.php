@@ -147,7 +147,7 @@
         <div class="container m-t-xxl">
             <!--Row-->
             <div class="row vertical-align v-center m-t-xxl m-b-xxl">
-                <div class="col-md-5 col-sm-5 m-b-xxl">
+                <div class="hidden-xs col-md-5 col-sm-5 m-b-xxl">
                     <div class="block-shot b box-shadow-lg">
                         <img src="/assets/img/monitor.png" class="img-responsive" alt="" style="
 height: 600px;
@@ -156,7 +156,7 @@ height: 600px;
 ">
                     </div>
                 </div>
-                <div class="col-md-5 col-md-offset-2 col-sm-8 col-sm-offset-1  m-b-xxl">
+                <div class="col-xs-12 col-md-5 col-md-offset-2 col-sm-8 col-sm-offset-1  m-b-xxl">
                     <h3 class="title" style="    color: #282828;
     margin-bottom: 25px;
     font-weight: 300;
