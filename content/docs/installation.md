@@ -8,9 +8,9 @@ pageTitle: Installation
 #Installation
 ----------
 
-Orchid based off [Laravel Framework](http://laravel.com), so before you put the Orchid, you must install [Laravel](http://laravel.com).
+Orchid based off [Laravel Framework](http://laravel.com), so before you put the Orchid, you must install [`Laravel`](http://laravel.com).
 
-You can see the installation on [YouTube](https://youtu.be/e9B5eVw7yss)
+You can see the installation on [`YouTube`](https://youtu.be/e9B5eVw7yss)
 
 #### Via Composer
 
@@ -45,7 +45,7 @@ Facades aliases to the 'aliases' array:
   // ...
   'Dashboard' =>  Orchid\Facades\Dashboard::class,
   'Alert' =>  Orchid\Alert\Facades\Alert::class,
-  'Setting' =>  Orchid\Settings\Facades\Setting::class,
+  'Setting' =>  Orchid\Setting\Facades\Setting::class,
   'Active' => Watson\Active\Facades\Active::class,
   'Image' => Intervention\Image\Facades\Image::class,
 ];
@@ -71,20 +71,12 @@ class User extends UserOrchid
 #### Finish
 
 
-> **Go to :**  http://localhost/dashboard
+> **Go to url:**  localhost:8000/dashboard
 
 The graphical installation does not work if the server is started using the `artisan serve` command, if you want to use a local server, please go to the public directory and run
 ```php
 php -S localhost:8000
 ```
 
-
-##### Creating administrator
-
-To create a user with the maximum rights (at the time of creation), execute the following command:
-
-```php
-php artisan make:admin nickname email@email.com secretpassword
-```
 
 @endverbatim
