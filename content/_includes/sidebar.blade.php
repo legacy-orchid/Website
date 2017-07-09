@@ -1,9 +1,11 @@
 <nav class="nav-docs">
     <h4 class="text-orchid font-thin">Get Started</h4>
     <ul class="toc-links">
-        <li><a href="@url('/docs/')">Home</a></li>
-        <li><a href="@url('/docs/screenshot')">Screenshot</a></li>
+        <li><a href="@url('/docs/')">Introduction</a></li>
+        <li><a href="@url('/docs/')">Requirements</a></li>
         <li><a href="@url('/docs/installation')">Installation</a></li>
+        <li><a href="@url('/docs/installation')">Updating</a></li>
+        <li><a href="@url('/docs/screenshot')">Screenshot</a></li>
         <li><a href="@url('/docs/contributors')">Guidelines</a></li>
         <li><a href="@url('/docs/license')">License</a></li>
     </ul>
