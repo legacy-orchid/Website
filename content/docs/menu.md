@@ -22,8 +22,6 @@ To register a new menu for your package or module, you need to
 Specify it in the composer provider.
 	
 ```php
-<?php
-
 namespace App\Http\Composers;
 
 use Orchid\Kernel\Dashboard;

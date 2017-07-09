@@ -20,8 +20,6 @@ The basic form differs from realizing only by the fact that it is possible to `c
 
 An example of the basic form:
 ```php
-<?php
-
 namespace Orchid\Foundation\Http\Forms\Systems\Roles;
 
 use Orchid\Forms\FormGroup;
@@ -68,8 +66,6 @@ Writing a form should not cause any problems since it looks like a regular contr
 
 Example:
 ```php
-<?php
-
 namespace Orchid\Foundation\Http\Forms\Systems\Roles;
 
 use Orchid\Forms\Form;
@@ -141,8 +137,6 @@ class BaseRolesForm extends Form
 Then your `controller` will look like this:
 
 ```php
-<?php
-
 namespace Orchid\Foundation\Http\Controllers\Systems;
 
 use Illuminate\Http\Request;

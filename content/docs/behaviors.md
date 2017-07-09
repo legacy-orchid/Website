@@ -32,7 +32,7 @@ Own behaviors must be registered in `config/content.php` in the types section
 The type looks like this:
 
 ```php
-<?php namespace DummyNamespace;
+namespace DummyNamespace;
 
 use Orchid\Behaviors\Many;
 

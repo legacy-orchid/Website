@@ -102,17 +102,32 @@ return [
 
 ];
 ```
+
+or
+```php
+return [
+    'body' => [
+        'tag'      => 'wysiwyg',
+        'name'     => 'body',
+        'max'      => 255,
+        'required' => true,
+        'rows'     => 10,
+    ],
+];
+```
  
  
  
 ### Place
  
 The 'place' field requires the key for Google map to be specified in `config/service`
-
+services.google.maps.key
 ```php
 //
-'google-maps' => [
+'google' => [
+    'maps' => [
         'key' => 'secret string'
+    ],
 ],
 ```
 
