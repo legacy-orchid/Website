@@ -14,14 +14,9 @@
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1 text-center">
                     <div class="m-t-xxl  padder-v">
-                        <h1 class="m-b-lg text-black" style="
-    font-family: Open Sans,sans-serif;
-    line-height: 1em;
-    font-weight: 300;
-        font-size: 56px;
+                        <h1 class="font-thin m-t-n l-h-1x padder-v text-black" style="font-size: 56px;
 ">Creating very flexible <br> Web sites using Orchid</h1>
-                        <p class="lead" style="
-    font-size: 18px;">Orchid CMS application provides a very flexible and extensible way of building your website.
+                        <p class="lead">Create your website on Orchid and using the full power of Laravel
                         </p>
 
                         <div class="btn-group btn-group-lg btn-group-justified m-t-lg">
@@ -61,11 +56,7 @@
             <!--Row-->
             <div class="row m-t-xxl m-b-xxl">
                 <div class="col-md-12 text-center">
-                    <h1 class="title  text-black" style="
-    font-size: 35px;
-    margin-bottom: 20px;
-    font-weight: 300;
-">Some frequently asked questions for you</h1>
+                    <h1 class="h2 text-black font-thin">Some frequently asked questions for you</h1>
                 </div>
                 <div class="col-md-12  m-t-xxl ">
                     <div class="block-faq m-b-lg">
@@ -184,6 +175,28 @@
     </section>
 --}}
 
+
+    <div class="bg-white b-t">
+        <div class="container m-b-lg">
+            <div class="row m-t-xxl m-b-lg">
+                        <div class="col-md-12 col-sm-12 col-xs-12"><p class="h2 text-black font-thin">Sponsors</p>
+                            <p class="text-muted">
+                                Companies that support us
+                            </p>
+                        </div>
+            </div>
+
+            <div class="row m-b-xxl v-center">
+                        <div class="col-sm-3">
+                            <a href="https://m.do.co/c/16c90d96a00c" target="_blank"><img src="/assets/img/sponsors/do.png" class="img-responsive"></a>
+                        </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
     <section id="features" class="features b-t" style="background: #fafafa">
         <!--Container-->
         <div class="container m-t-xxl">
@@ -199,12 +212,9 @@ height: 600px;
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-5 col-md-offset-2 col-sm-8 col-sm-offset-1  m-b-xxl">
-                    <h3 class="title" style="    color: #282828;
-    margin-bottom: 25px;
-    font-weight: 300;
-    font-size: 33px;">Take a quick look at some<br>
+                    <p class="h2 text-black font-thin">Take a quick look at some<br>
                         great features !
-                    </h3>
+                    </p>
                     <ul class="list-unstyled  m-t-xl">
                         <li>
                             <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
