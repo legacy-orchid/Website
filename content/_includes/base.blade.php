@@ -44,7 +44,7 @@
         <div class="collapse navbar-collapse m-n w-full" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right  font-thin hidden-xs">
                     <li><a href="https://github.com/TheOrchid/Platform" target="_blank">GitHub</a></li>
-                    <li><a href="https://demo-orchid.tk">Demo</a></li>
+                    <li><a href="http://demo-orchid.tk">Demo</a></li>
                     <li><a href="@url('/docs/')">Documentation</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right  font-thin visible-xs">
