@@ -1,275 +1,107 @@
-@extends('_includes.base')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/TheOrchid/Platform/master/resources/assets/dist/css/orchid.css">
+    <link rel="stylesheet" href="@url('assets/css/app.css')">
 
-@section('pageTitle','Orchid - Laravel admin panel')
-@section('pageDescription','Laravel Platform application provides a very flexible and extensible way of building your custom application')
 
-@section('body')
+    <title>@yield('pageTitle') - {{$siteName}} </title>
+    <meta name="description" content="@yield('pageDescription', $pageDescription)">
+    <meta name="keywords"
+          content="laravel, laravel cms, laravel platform, laravel cmf, laravel admin panel, php laravel cms, laravel orchid">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ac5ca0">
+    <meta name="theme-color" content="#ffffff">
 
-
-
-<div id="content" class="bg-white-only">
-
-    <div class="bg-white-only">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1 text-center">
-                    <div class="m-t-xxl  padder-v">
-                        <h1 class="font-thin m-t-n l-h-1x padder-v text-black" style="font-size: 56px;
-">Creating very flexible <br> Web sites using Orchid</h1>
-                        <p class="lead">Create your website on Orchid and using the full power of Laravel
-                        </p>
-
-                        <div class="btn-group btn-group-lg btn-group-justified m-t-lg">
-                            <a href="https://github.com/TheOrchid/Platform" target="_blank" class="btn">
-                                <i class="icon-social-github"></i> Download</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+</head>
+<body>
 
 
 
-            <div class="row m-b-xxl">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="block-media m-t-lg m-b-lg page">
-                        <div class="b box-shadow-lg">
-                            <a href="https://www.youtube.com/watch?v=e9B5eVw7yss" target="_blank"><img src="/assets/img/index.png" alt="" class="img-responsive"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<a href="/en">English</a>
+<a href="/ru">Russian</a>
 
 
+<script src="@url('/assets/js/app.js')"></script>
+<script src="https://cdn.rawgit.com/TheOrchid/Platform/0b4993c7/resources/assets/dist/js/orchid.js"></script>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter42925369 = new Ya.Metrika({
+                    id: 42925369,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+                });
+            } catch (e) {
+            }
+        });
+        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+            n.parentNode.insertBefore(s, n);
+        };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/42925369"
+                                                                                    style="position:absolute; left:-9999px;"
+                                                                                    alt=""/></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 
-        </div>
-    </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-39757298-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6284335724986539",
+        enable_page_level_ads: true
+    });
+</script>
 
 
+<script type="text/javascript">
+    $( document ).ready(function(){
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang == "ru") {
+            window.location.href = "https://theorchid.github.io/ru"
+        }
+        else {
+            window.location.href = "https://theorchid.github.io/en"
+        }
+    });
+</script>
 
-    <section id="faq" class="faq b-t" style="
-    background: #fafafa;
-">
-        <!--Container-->
-        <div class="container">
-            <!--Row-->
-            <div class="row m-t-xxl m-b-xxl">
-                <div class="col-md-12 text-center">
-                    <h1 class="h2 text-black font-thin">Some frequently asked questions for you</h1>
-                </div>
-                <div class="col-md-12  m-t-xxl ">
-                    <div class="block-faq m-b-lg">
-                        <h4 class="m-b-md text-black">What is Orchid?</h4>
-                        <p style="line-height: 25px;">Orchid is a package for Laravel which helps with the administration of the application on Laravel, allowing you to write code as you want, control of routing/themes/plugins/etc - none of this and will not be! The package only gives a good set of tools that will be in demand in almost every project.</p>
-                    </div>
-                    <div class="block-faq  m-b-lg">
-                        <h4 class="m-b-md text-black">Is it necessary to use the built-in recordings?</h4>
-                        <p style="line-height: 25px;">We assume that most of your records will be stored in json, which will allow you to do the translation and the universal structure, but if the rails have goals like a CRM system with harsh conditions, then of course you can use the classic CRUD yourself, orchids will not stop you.</p>
-                    </div>
-                    <div class="block-faq  m-b-lg">
-                        <h4 class="m-b-md text-black">Are there any additional system requirements from Laravel?</h4>
-                        <p style="line-height: 25px;">Yes, you need a PHP extension for image processing and support for json type your database.</p>
-                    </div>
-
-                    <div class="block-faq  m-b-lg">
-                        <h4 class="m-b-md text-black">How much does it cost?</h4>
-                        <p style="line-height: 25px;">Orchid is free, but we appreciate donations.</p>
-                    </div>
-                </div>
-
-            </div>
-            <!--End row-->
-        </div>
-        <!--End container-->
-    </section>
-
-    {{--
-    <section id="about" class="bg-white-only  b-t">
-        <!--Container-->
-        <div class="container m-t-xxl m-b-xxl">
-            <!--Row-->
-            <div class="row m-t-xxl">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 m-t-xxl">
-                    <div class="block-content text-center">
-                        <h1 class="title m-b-md text-dark" style="font-weight: 300;">Beautiful & simple easy to use<br>
-                            admin panel
-                        </h1>
-                        <p class="lead">
-                            The platform that grows with you does not interfere and allows you to use your favorite technologies to easily create the necessary functions.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--End row-->
-            <!--Row-->
-            <div class="row m-t-xxl">
-                <div class="col-md-4 col-sm-4">
-                    <div class="m-t-md m-b-md wrapper-lg  b">
-                        <div class="ico column"><i class="icon-cloud-download"></i></div>
-                        <div class="desc">
-                            <h4 class="font-thin">Easy Installation</h4>
-                            <p>Installing the package with a composer and step-by-step assistant makes the process simple and understandable
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="m-t-md m-b-md wrapper-lg  b">
-                        <div class="ico column"><i class="icon-layers"></i></div>
-                        <div class="desc">
-                            <h4 class="font-thin">Extendable</h4>
-                            <p>You can install your favorite packages or write your own set of functions that will follow you in your applications
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="m-t-md m-b-md wrapper-lg  b">
-                        <div class="ico column"><i class="icon-globe"></i></div>
-                        <div class="desc">
-                            <h4 class="font-thin">Localization</h4>
-                            <p>You can use the panel in your native language or make applications with support for multiple language translations
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End row-->
-            <!--Row-->
-            <div class="row m-b-xxl">
-                <div class="col-md-4 col-sm-4">
-                    <div class="m-t-md m-b-md wrapper-lg  b">
-                        <div class="ico column"><i class="icon-screen-desktop"></i></div>
-                        <div class="desc">
-                            <h4 class="font-thin">Light Design</h4>
-                            <p>Simplicity and convenience of design allows developers to not think about the appearance of their applications
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="m-t-md m-b-md wrapper-lg  b">
-                        <div class="ico column"><i class="icon-rocket"></i></div>
-                        <div class="desc">
-                            <h4 class="font-thin">Saves time</h4>
-                            <p>You do not need to worry about the standard features of your applications, focus only on the main advantages
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="m-t-md m-b-md wrapper-lg  b">
-                        <div class="ico column"><i class="icon-support"></i></div>
-                        <div class="desc">
-                            <h4 class="font-thin">Great Support</h4>
-                            <p>Implementation of paid support of projects of companies or open questions on the GitHub and the help of the Laravel community
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End row-->
-        </div>
-        <!--End container-->
-    </section>
---}}
-
-
-    <div class="bg-white b-t">
-        <div class="container m-b-lg">
-            <div class="row m-t-xxl m-b-lg">
-                        <div class="col-md-12 col-sm-12 col-xs-12"><p class="h2 text-black font-thin">Sponsors</p>
-                            <p class="text-muted">
-                                Companies that support us
-                            </p>
-                        </div>
-            </div>
-
-            <div class="row m-b-xxl v-center">
-                        <div class="col-sm-3">
-                            <a href="https://m.do.co/c/16c90d96a00c" target="_blank"><img src="/assets/img/sponsors/do.png" class="img-responsive"></a>
-                        </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <section id="features" class="features b-t" style="background: #fafafa">
-        <!--Container-->
-        <div class="container m-t-xxl">
-            <!--Row-->
-            <div class="row vertical-align v-center m-t-xxl m-b-xxl">
-                <div class="hidden-xs col-md-5 col-sm-5 m-b-xxl">
-                    <div class="block-shot b box-shadow-lg">
-                        <img src="/assets/img/monitor.png" class="img-responsive" alt="" style="
-height: 600px;
-    object-fit: none;
-    object-position: top left;
-">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-5 col-md-offset-2 col-sm-8 col-sm-offset-1  m-b-xxl">
-                    <p class="h2 text-black font-thin">Take a quick look at some<br>
-                        great features !
-                    </p>
-                    <ul class="list-unstyled  m-t-xl">
-                        <li>
-                            <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
-                            <p class="clear m-b-lg text-justify"><strong>Pages & Posts</strong>, quick and easy replacement for CRUD, monitored by the behavior when creating your website. </p>
-                        </li>
-                        <li>
-                            <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
-                            <p class="clear m-b-lg text-justify"><strong>Forms</strong>, an excellent solution for extending the additional or additional functions in your application.</p>
-                        </li>
-                        <li>
-                            <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
-                            <p class="clear m-b-lg text-justify"><strong>Menu</strong>, simple and easy both for internal use and for display to the user, supporting nested structure and modification.</p>
-                        </li>
-                        <li>
-                            <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
-                            <p class="clear m-b-lg text-justify"><strong>Permission</strong>, the development of selective access control policy. Does not conflict or replace the built-in features of Gate.</p>
-                        </li>
-                        <li>
-                            <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
-                            <p class="clear m-b-lg text-justify"><strong>Settings</strong>, a repository of "key-value" is the simplest data storage, use the key to access the value.</p>
-                        </li>
-                        <li>
-                            <i class="icon-check pull-left text-lg m-r m-t-sm text-success"></i>
-                            <p class="clear m-b-lg text-justify"><strong>More:</strong> installs, behaviors, tags, attachments, comment, widget, field, alert, active, logs, backups and etc  ...</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--End row-->
-        </div>
-        <!--End container-->
-    </section>
-
-
-
-    <section id="contact" class="socials text-center b-t">
-        <!--Container-->
-        <div class="container">
-            <!--Row-->
-            <div class="row m-t-xxl m-b-xxl">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
-                    <h2 class="title font-thin text-black">Make a contribution</h2>
-                    <p class="lead large not-mb">
-                        I encourage everyone to contribute to the Orchid project. You can find the latest version of the GitHub code at
-                        <a class="blue-link" href="https://github.com/TheOrchid/Platform" target="_blank">https://github.com/TheOrchid/Platform</a>.
-                    </p>
-                </div>
-            </div>
-            <!--End row-->
-        </div>
-        <!--End container-->
-    </section>
-
-
-</div>
-
-
-@stop
+</body>
+</html>
