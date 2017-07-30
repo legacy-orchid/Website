@@ -12,6 +12,8 @@ pageDescription: Orchid Posts systems for Laravel
 Итак, теперь вы можете получить данные базы данных:
 
 ```php
+use Orchid\Core\Models\Post;
+
 $posts = Post::all();
 ```
 

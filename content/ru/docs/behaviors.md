@@ -126,6 +126,16 @@ class DummyClass extends Many
  }
 
 ```
+
+
+Вы можете создать поведения с помощью команд:
+```php
+//Создат поведения для многих записей
+php artisan make:manyBehavior
+  
+//Создат поведения для одной записи  
+php artisan make:singleBehavior      
+```
  
 
  

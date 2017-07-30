@@ -12,6 +12,8 @@ The platform assumes that by default any elements that contain site data are a `
 So, now you can fetch database data:
 
 ```php
+use Orchid\Core\Models\Post;
+
 $posts = Post::all();
 ```
 

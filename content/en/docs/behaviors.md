@@ -127,6 +127,15 @@ The data that you want to display in the grid can be modified by passing an arra
 
 ```
  
+ 
+You can create behaviors with commands:
 
+```php
+// Create behaviors for many records
+Php artisan make: manyBehavior
+  
+// Create behaviors for one record
+Php artisan make: singleBehavior 
+```
  
 @endverbatim
