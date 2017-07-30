@@ -16,8 +16,10 @@ pageDescription: Laravel tagging systems
 В этом разделе мы покажем, как вы можете управлять своими субъектами тегов.
 
 ```php
+use Orchid\Core\Models\Post;
+
 // Get the entity object
-$post = Post::find (1);
+$post = Post::find(1);
 
 // Through a string
 $post->tag('foo, bar, baz');
