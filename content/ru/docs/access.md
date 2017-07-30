@@ -24,19 +24,19 @@ pageTitle: Differentiation of access rights
 Auth:user()->hasAccess($string);
 
 //Получить разрешения пользователя
-Auth:user()->getPermissionsAttribute($permissions);
+Auth::user()->getPermissionsAttribute($permissions);
 
 // Задать разрешения доступа
-Auth:user()->setPermissionsAttribute($permissions)
+Auth::user()->setPermissionsAttribute($permissions)
 
 // Получить все роли пользователя
-Auth:user()->getRoles();
+Auth::user()->getRoles();
 
 // Проверить имеет ли пользователь роль
-Auth:user()->inRole($role)
+Auth::user()->inRole($role)
 
 // Добавить к пользователю роль
-Auth:user()->addRole($role)
+Auth::user()->addRole($role)
 ```
 
 ## Роли

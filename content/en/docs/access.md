@@ -21,22 +21,22 @@ The user has several options for managing roles
 ```php
 // Check if the user has an extension
 // Verification carried out both in himself and in his role
-Auth:user()->hasAccess($string);
+Auth::user()->hasAccess($string);
 
 // Get the user's permission
-Auth:user()->getPermissionsAttribute($permissions);
+Auth::user()->getPermissionsAttribute($permissions);
 
 // Set the access permissions
-Auth:user()->setPermissionsAttribute($permissions)
+Auth::user()->setPermissionsAttribute($permissions)
 
 // Get all the user role
-Auth:user()->getRoles();
+Auth::user()->getRoles();
 
 // Check if the user has a role
-Auth:user()->inRole($role)
+Auth::user()->inRole($role)
 
 // Add a user role
-Auth:user()->addRole($role)
+Auth::user()->addRole($role)
 ```
 
 ## Roles
