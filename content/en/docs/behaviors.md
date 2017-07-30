@@ -132,10 +132,10 @@ You can create behaviors with commands:
 
 ```php
 // Create behaviors for many records
-Php artisan make: manyBehavior
+Php artisan make:manyBehavior
   
 // Create behaviors for one record
-Php artisan make: singleBehavior 
+Php artisan make:singleBehavior 
 ```
  
 @endverbatim
