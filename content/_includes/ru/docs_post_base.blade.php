@@ -31,6 +31,7 @@
                             <ul class="toc-links">
                                 <li><a href="@url('/ru/docs/post')">Записи</a></li>
                                 <li><a href="@url('/ru/docs/behaviors')">Поведения</a></li>
+                                <li><a href="@url('/ru/docs/filters')">Фильтры</a></li>
                                 <li><a href="@url('/ru/docs/tags')">Теги</a></li>
                             </ul>
 

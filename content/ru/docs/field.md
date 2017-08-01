@@ -60,7 +60,7 @@ return [
  
  
  
-### поле Локация
+### Локация
  
 Поле `локация` требует, чтобы ключ для карты Google указывался в `config/service`
 services.google.maps.key
