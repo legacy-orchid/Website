@@ -4,19 +4,19 @@ view::yields: post_body
 pageTitle: Filters Laravel
 ---
 @verbatim
-# Фильтры
+# Filters
 ----------
 
-Для выборки значений на основе параметров Http запроса можно с помощью комманды создать фильтры:
+To retrieve values based on Http query parameters, you can use the command to create filters:
 
 ```php
 php artisan make:filter QueryFilter
 ```
 
-Это создаст класс фильтр в папке `app/Http/Filters`
+This will create a class filter in the folder `app/Http/Filters`
 
 
-Пример фильтра:
+Filter example:
 ```php
 namespace App\Http\Filters;
 
@@ -61,11 +61,11 @@ class QueryFilter extends Filter
 }
 ```
 
-Фильтр сработает, при условии наличии хотя бы одного параметра указанного в массиве `$parameters`, если массив будет пуст, тогда фильтр будет работать при каждом запросе
+The filter will work if there is at least one parameter specified in the array `$parameters`, if the array is empty, then the filter will work for each request
 
-#### Использование
+#### Using
 
-Для использования фильтра, необходимо указать его в классе поведения
+To use a filter, you must specify it in the behavior class
 ```php
 use Orchid\Behaviors\Many;
 
@@ -83,7 +83,7 @@ class MyBehaviorPost extends Many
 }
 ```
 
-Фильтрацию можно запустить методом `filtersApply`:
+Filtering can be started using the `filtersApply` method:
 ```php
 use Orchid\Core\Models\Post;
 

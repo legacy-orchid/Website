@@ -29,6 +29,7 @@
                             <ul class="toc-links">
                                 <li><a href="@url('/en/docs/post')">Post</a></li>
                                 <li><a href="@url('/en/docs/behaviors')">Behaviors</a></li>
+                                <li><a href="@url('/en/docs/filters')">Filters</a></li>
                                 <li><a href="@url('/en/docs/tags')">Tags</a></li>
                             </ul>
 
