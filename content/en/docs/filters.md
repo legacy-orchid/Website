@@ -1,5 +1,5 @@
 ---
-view::extends: _includes.ru.docs_post_base
+view::extends: _includes.en.docs_post_base
 view::yields: post_body
 pageTitle: Filters Laravel
 ---
