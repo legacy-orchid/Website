@@ -9,7 +9,7 @@ pageTitle: Forms
  
 The form is an independent part of the application, which takes on the function of the controller and serves to implement the CRUD.
 
-Orchid has two forms:
+ORCHID has two forms:
 1. The basic
 1. Realizing
 

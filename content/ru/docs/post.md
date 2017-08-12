@@ -2,7 +2,7 @@
 view::extends: _includes.ru.docs_post_base
 view::yields: post_body
 pageTitle: Posts
-pageDescription: Orchid Posts systems for Laravel
+pageDescription: ORCHID Posts systems for Laravel
 ---
 @verbatim
 # Записи

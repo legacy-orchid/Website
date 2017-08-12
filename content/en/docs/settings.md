@@ -11,7 +11,7 @@ pageDescription: Laravel settings - a repository of "key-value" is the simplest 
 Settings - a repository of "key-value" is the simplest data storage,
 Use the key to access the value. Such storage is used to store settings,
  the creation of specialized file systems, as caches for objects as well as systems,
-designed with an eye on scalability. Within Orchid configuration implemented using a model which uses mutation.
+designed with an eye on scalability. Within ORCHID configuration implemented using a model which uses mutation.
 ### Using :
 	
 

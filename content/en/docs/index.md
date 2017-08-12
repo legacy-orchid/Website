@@ -9,7 +9,7 @@ pageDescription: - Laravel Admin Panel
 #Documentation
 ----------
 
-Orchid PHP is an application that allows you to quickly write simple but powerful websites and applications.
+ORCHID PHP is an application that allows you to quickly write simple but powerful websites and applications.
 The main emphasis is on rapid prototyping and different content.
 
 
@@ -18,7 +18,7 @@ That's all.
 ###What is it?
 
 
-Orchid is an extension of the Laravel web programming framework, which can be used to develop almost any web application.
+ORCHID is an extension of the Laravel web programming framework, which can be used to develop almost any web application.
 The package specializes in working with content and simplifying the construction of functionality, for the implementation of which on other systems the developer will have to face fear and hatred.
 
 

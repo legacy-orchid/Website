@@ -11,7 +11,7 @@ The panel menu is an element of the admin interface,
 Allows you to select one of several listed software options.
 It is an important element of the graphical user interface.
 
-The menu in Orchid is divided into several areas, which in turn can be
+The menu in ORCHID is divided into several areas, which in turn can be
 Containers for another menu.
 
 

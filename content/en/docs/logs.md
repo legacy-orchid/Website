@@ -7,7 +7,7 @@ pageTitle: Error log
 #Error log
 ----------
 
-Laravel uses for logging the popular library Monolog, Orchid uses
+Laravel uses for logging the popular library Monolog, ORCHID uses
 A logging parser that allows you to obtain data for building and analysis.
 
 

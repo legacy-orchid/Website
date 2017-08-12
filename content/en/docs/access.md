@@ -23,12 +23,6 @@ The user has several options for managing roles
 // Verification carried out both in himself and in his role
 Auth::user()->hasAccess($string);
 
-// Get the user's permission
-Auth::user()->getPermissionsAttribute($permissions);
-
-// Set the access permissions
-Auth::user()->setPermissionsAttribute($permissions)
-
 // Get all the user role
 Auth::user()->getRoles();
 
@@ -44,16 +38,9 @@ Auth::user()->addRole($role)
 Roles also have procedures for:
 
 ```php
-$role = Role::getRoleSlug($string);
-
 // Returns all users with this role
 $role->getUsers();
 
-// Gets the permission roles
-$role->getPermissionsAttribute($permissions);
-
-// Set the permissions for the role
-$role->setPermissionsAttribute($permissions);
 ```
 
 
@@ -100,7 +87,7 @@ class PermissionServiceProvider extends ServiceProvider
             'Modules' => [
                 [
                     'slug'        => 'Analytics',
-                    'description' => 'Tools to measure data to gain customer insights.',
+                    'description' => 'Description',
                 ],
             ],
 

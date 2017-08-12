@@ -1,6 +1,6 @@
 @extends('_includes.en.base')
 
-@section('pageTitle','Orchid - Laravel admin panel')
+@section('pageTitle','ORCHID - Laravel admin panel')
 @section('pageDescription','Laravel Platform application provides a very flexible and extensible way of building your custom application')
 
 @section('body')
@@ -15,8 +15,8 @@
                 <div class="col-sm-10 col-sm-offset-1 text-center">
                     <div class="m-t-xxl  padder-v">
                         <h1 class="font-thin m-t-n l-h-1x padder-v text-black" style="font-size: 56px;
-">Creating very flexible <br> Web sites using Orchid</h1>
-                        <p class="lead">Create your website on Orchid and using the full power of Laravel
+">Creating very flexible <br> Web sites using ORCHID</h1>
+                        <p class="lead">Create your website on ORCHID and using the full power of Laravel
                         </p>
 
                         <div class="btn-group btn-group-lg btn-group-justified m-t-lg">
@@ -95,8 +95,8 @@ height: 600px;
                 </div>
                 <div class="col-md-12  m-t-md ">
                     <div class="block-faq m-b-lg">
-                        <h4 class="m-b-md text-black">What is Orchid?</h4>
-                        <p style="line-height: 25px;">Orchid is a package for Laravel which helps with the administration of the application on Laravel, allowing you to write code as you want, control of routing/themes/plugins/etc - none of this and will not be! The package only gives a good set of tools that will be in demand in almost every project.</p>
+                        <h4 class="m-b-md text-black">What is ORCHID?</h4>
+                        <p style="line-height: 25px;">ORCHID is a package for Laravel which helps with the administration of the application on Laravel, allowing you to write code as you want, control of routing/themes/plugins/etc - none of this and will not be! The package only gives a good set of tools that will be in demand in almost every project.</p>
                     </div>
                     <div class="block-faq  m-b-lg">
                         <h4 class="m-b-md text-black">Is it necessary to use the built-in recordings?</h4>
@@ -109,7 +109,7 @@ height: 600px;
 
                     <div class="block-faq  m-b-lg">
                         <h4 class="m-b-md text-black">How much does it cost?</h4>
-                        <p style="line-height: 25px;">Orchid is free, but we appreciate donations.</p>
+                        <p style="line-height: 25px;">ORCHID is free, but we appreciate donations.</p>
                     </div>
                 </div>
 
@@ -130,7 +130,7 @@ height: 600px;
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                     <h2 class="title font-thin text-black">Make a contribution</h2>
                     <p class="lead large not-mb">
-                        I encourage everyone to contribute to the Orchid project. You can find the latest version of the GitHub code at
+                        I encourage everyone to contribute to the ORCHID project. You can find the latest version of the GitHub code at
                         <a class="blue-link" href="https://github.com/TheOrchid/Platform" target="_blank">https://github.com/TheOrchid/Platform</a>.
                     </p>
                 </div>

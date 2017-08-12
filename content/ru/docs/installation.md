@@ -8,8 +8,8 @@ pageTitle: Installation
 # Установка
 ----------
 
-Orchid основана на [Laravel Framework](http://laravel.com), 
-поэтому перед тем, как поставить Orchid, вы должны установить [`Laravel`](http://laravel.com).
+ORCHID основана на [Laravel Framework](http://laravel.com), 
+поэтому перед тем, как поставить ORCHID, вы должны установить [`Laravel`](http://laravel.com).
 
 Вы можете увидеть установку на [`YouTube`](https://youtu.be/e9B5eVw7yss)
 

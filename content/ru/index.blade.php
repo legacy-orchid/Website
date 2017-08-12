@@ -1,6 +1,6 @@
 @extends('_includes.ru.base')
 
-@section('pageTitle','Orchid - Laravel admin panel')
+@section('pageTitle','ORCHID - Laravel admin panel')
 @section('pageDescription','Laravel Platform application provides a very flexible and extensible way of building your custom application')
 
 @section('body')
@@ -16,7 +16,7 @@
                     <div class="m-t-xxl  padder-v">
                         <h1 class="font-thin m-t-n l-h-1x padder-v text-black" style="font-size: 56px;
 ">Создавайте гибкие веб-сайты</h1>
-                        <p class="lead">Создай свой сайт на Orchid используя всю мощь Laravel
+                        <p class="lead">Создай свой сайт на ORCHID используя всю мощь Laravel
                         </p>
 
                         <div class="btn-group btn-group-lg btn-group-justified m-t-lg">
@@ -97,9 +97,9 @@ height: 600px;
                 </div>
                 <div class="col-md-12  m-t-md ">
                     <div class="block-faq m-b-lg">
-                        <h4 class="m-b-md text-black">Что такое Orchid?</h4>
+                        <h4 class="m-b-md text-black">Что такое ORCHID?</h4>
                         <p style="line-height: 25px;">
-                            Orchid - это пакет для Laravel, который помогает при администрировании приложения,
+                            ORCHID - это пакет для Laravel, который помогает при администрировании приложения,
                             предоставляя только хороший набор инструментов, который будет востребован практически в каждом проекте.
                         </p>
                     </div>
@@ -107,7 +107,7 @@ height: 600px;
                         <h4 class="m-b-md text-black">Нужно ли использовать встроенные записи?</h4>
                         <p style="line-height: 25px;">
                             Мы предполагаем, что большинство ваших записей будут сохранены в json, что позволит вам сделать перевод и универсальную структуру,
-                            но если есть жёсткие условия то, вы можете использовать классический CRUD самостоятельно , Orchid не остановит вас.
+                            но если есть жёсткие условия то, вы можете использовать классический CRUD самостоятельно , ORCHID не остановит вас.
                         </p>
                     </div>
                     <div class="block-faq  m-b-lg">
@@ -117,7 +117,7 @@ height: 600px;
 
                     <div class="block-faq  m-b-lg">
                         <h4 class="m-b-md text-black">Сколько это стоит?</h4>
-                        <p style="line-height: 25px;">Orchid бесплатна, но мы ценим пожертвования.</p>
+                        <p style="line-height: 25px;">ORCHID бесплатна, но мы ценим пожертвования.</p>
                     </div>
                 </div>
 
@@ -140,7 +140,7 @@ height: 600px;
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                     <h2 class="title font-thin text-black">Сделать вклад</h2>
                     <p class="lead large not-mb">
-                      Я призываю всех внести свой вклад в проект Orchid. <br>Вы можете найти последнюю версию кода GitHub на странице
+                      Я призываю всех внести свой вклад в проект ORCHID. <br>Вы можете найти последнюю версию кода GitHub на странице
                         <a class="blue-link" href="https://github.com/TheOrchid/Platform" target="_blank">https://github.com/TheOrchid/Platform</a>.
                     </p>
                 </div>

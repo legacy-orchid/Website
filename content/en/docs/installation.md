@@ -8,7 +8,7 @@ pageTitle: Installation
 #Installation
 ----------
 
-Orchid based off [Laravel Framework](http://laravel.com), so before you put the Orchid, you must install [`Laravel`](http://laravel.com).
+ORCHID based off [Laravel Framework](http://laravel.com), so before you put the ORCHID, you must install [`Laravel`](http://laravel.com).
 
 You can see the installation on [`YouTube`](https://youtu.be/e9B5eVw7yss)
 

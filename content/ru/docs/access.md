@@ -23,12 +23,6 @@ pageTitle: Differentiation of access rights
 // Проверка осуществляется как для пользователя, так и для его роли
 Auth:user()->hasAccess($string);
 
-//Получить разрешения пользователя
-Auth::user()->getPermissionsAttribute($permissions);
-
-// Задать разрешения доступа
-Auth::user()->setPermissionsAttribute($permissions)
-
 // Получить все роли пользователя
 Auth::user()->getRoles();
 
@@ -44,16 +38,8 @@ Auth::user()->addRole($role)
 Роли также имеют процедуры для:
 
 ```php
-$role = Role::getRoleSlug($string);
-
 // Возвращает всех пользователей с этой ролью
 $role->getUsers();
-
-// Получить разрешения роли
-$role->getPermissionsAttribute($permissions);
-
-// Установить разрешения роли
-$role->setPermissionsAttribute($permissions);
 ```
 
 
@@ -100,7 +86,7 @@ class PermissionServiceProvider extends ServiceProvider
             'Modules' => [
                 [
                     'slug'        => 'Analytics',
-                    'description' => 'Tools to measure data to gain customer insights.',
+                    'description' => 'Description',
                 ],
             ],
 

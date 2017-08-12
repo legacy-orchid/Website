@@ -7,7 +7,7 @@ pageTitle: Contributor Guidelines
 # Contributor Guidelines
 ----------
 
-I encourage everyone to contribute to the Orchid project.
+I encourage everyone to contribute to the ORCHID project.
 You can find the latest version of the GitHub code at <https://github.com/TheOrchid/Platform>.
 
 ## Problem Tracking
@@ -29,13 +29,13 @@ But do not expect others to drop everything and start fixing your problem. The e
 
 ## Participation in the main discussions
 
-You can suggest new features and improvements to existing Orchid behavior.
+You can suggest new features and improvements to existing ORCHID behavior.
 If you are offering a new feature, please be prepared to perform at least the code samples that will be needed to call / use this function.
 
 
 ## Security
 
-If you find a security vulnerability inside Orchid, please send an e-mail to `bliz48rus(at)gmail.com`.
+If you find a security vulnerability inside ORCHID, please send an e-mail to `bliz48rus(at)gmail.com`.
 All such vulnerabilities will be immediately reviewed.
 
 
@@ -43,7 +43,7 @@ All such vulnerabilities will be immediately reviewed.
 
 ## Code writing style
 
-Orchid follows [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide-meta.md) and [PSR-4](Https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) standards.
+ORCHID follows [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide-meta.md) and [PSR-4](Https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) standards.
 
 
 You can use PHP-CS-Fixer to fix your code style before publishing.

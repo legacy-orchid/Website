@@ -8,7 +8,7 @@ pageDescription: Laravel Behaviors
 #Behaviors 
 ----------
 
-Behaviors are the main part of Orchid, instead of generating a CRUD for each model
+Behaviors are the main part of ORCHID, instead of generating a CRUD for each model
 You can select any entity in a separate type and easily operate it
 
 
