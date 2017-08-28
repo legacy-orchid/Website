@@ -16,7 +16,7 @@ You can see the installation on [`YouTube`](https://youtu.be/e9B5eVw7yss)
 
 Going your project directory on shell and run this command: 
 ```php
-$ composer require orchid/platform
+$ composer require orchid/cms
 ```
 
 ####  Provider and Facades
@@ -30,7 +30,8 @@ Service provider to the 'providers' array:
   //...
 
   // Package Service Providers
-  Orchid\Providers\FoundationServiceProvider::class,
+  Orchid\Platform\Providers\FoundationServiceProvider::class,
+  Orchid\CMS\Providers\FoundationServiceProvider::class,
 
   // ...
 
@@ -43,10 +44,10 @@ Facades aliases to the 'aliases' array:
 ```php
 'aliases' => [
   // ...
-  'Dashboard' =>  Orchid\Facades\Dashboard::class,
+  'Dashboard' =>  Orchid\Platform\Facades\Dashboard::class,
   'Alert' =>  Orchid\Alert\Facades\Alert::class,
-  'Setting' =>  Orchid\Setting\Facades\Setting::class,
   'Active' => Watson\Active\Facades\Active::class,
+  'Setting' =>  Orchid\Setting\Facades\Setting::class,
   'Image' => Intervention\Image\Facades\Image::class,
 ];
 ```
@@ -59,7 +60,7 @@ Inherit your model App\User
 ```php
 namespace App;
 
-use Orchid\Core\Models\User as UserOrchid;
+use Orchid\Platform\Core\Models\User as UserOrchid;
 
 class User extends UserOrchid
 {

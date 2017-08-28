@@ -18,7 +18,7 @@ ORCHID основана на [Laravel Framework](http://laravel.com),
 
 Перейдите в каталог проекта и запустите эту команду:
 ```php
-$ composer require orchid/platform
+$ composer require orchid/cms
 ```
 
 ####  Поставщики и фасады
@@ -32,7 +32,8 @@ $ composer require orchid/platform
   //...
 
   // Package Service Providers
-  Orchid\Providers\FoundationServiceProvider::class,
+  Orchid\Platform\Providers\FoundationServiceProvider::class,
+  Orchid\CMS\Providers\FoundationServiceProvider::class,
 
   // ...
 
@@ -45,10 +46,10 @@ $ composer require orchid/platform
 ```php
 'aliases' => [
   // ...
-  'Dashboard' =>  Orchid\Facades\Dashboard::class,
+  'Dashboard' =>  Orchid\Platform\Facades\Dashboard::class,
   'Alert' =>  Orchid\Alert\Facades\Alert::class,
-  'Setting' =>  Orchid\Setting\Facades\Setting::class,
   'Active' => Watson\Active\Facades\Active::class,
+  'Setting' =>  Orchid\Setting\Facades\Setting::class,
   'Image' => Intervention\Image\Facades\Image::class,
 ];
 ```
@@ -61,7 +62,7 @@ $ composer require orchid/platform
 ```php
 namespace App;
 
-use Orchid\Core\Models\User as UserOrchid;
+use Orchid\Platform\Core\Models\User as UserOrchid;
 
 class User extends UserOrchid
 {
